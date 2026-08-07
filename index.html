@@ -1,0 +1,3302 @@
+<!DOCTYPE html>
+<!-- saved from url=(0370)https://cegwrjb0vcp8gkv2.canvacode.com/codelet/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..8Qsyadcoo8_4irXI.xcvY4vNII9yKmaM2eYn2CsD3qFXjPJjQj69h4JbRXRB2o1lh9sxduip6po7CmLOwJHLjeVbdjjy36_MbalId53YP-dw5OhgqxeWa8S9W_SmTJcmGHOGaOu1rN_0wGMY_mHKQzO3PeRBWE57lzqbz9eEQbpI5zgz5yEHwaHgdBcIv8DZyms060YBE2B158LI.BfmBstPyRSl0B8W2knpTkw/index.html?pin_id=6c3dfc5aa15c5b246d39ea613a98d370 -->
+<html lang="ms"
+  style="height: 768px; --vh: 7.68px; overflow: visible; scrollbar-width: none; font-size: clamp(12px, 10.2241px + 0.4228vw, 16px);">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="./telemetry_sdk.js.download"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest Work</title>
+  <link rel="icon"
+    href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;&gt;&lt;text x=&#39;50&#39; y=&#39;75&#39; font-size=&#39;80&#39; text-anchor=&#39;middle&#39;&gt;%F0%9F%8E%AE&lt;/text&gt;&lt;/svg&gt;"
+    type="image/svg+xml">
+  <script src="./3.4.17"></script>
+  <link href="./css2" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', monospace;
+      image-rendering: pixelated;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUpIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes carouselFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .carousel-slide.active {
+      animation: carouselFadeUp 0.5s ease forwards;
+    }
+
+    .animate-up {
+      animation: fadeUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .pixel-border {
+      border: 4px solid #fff;
+      box-shadow: 4px 4px 0 #fff;
+    }
+
+    .pixel-btn {
+      border: 3px solid #fff;
+      box-shadow: 3px 3px 0 #fff;
+      transition: all 0.3s ease;
+      min-height: 44px;
+    }
+
+    .pixel-btn:hover {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.2), 3px 3px 0 #fff;
+      transform: translateY(-8px) scale(1.08);
+    }
+
+    .pixel-btn:active {
+      box-shadow: none;
+      transform: translate(3px, 3px);
+    }
+
+    .pixel-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .pixel-card:hover {
+      transform: translateY(-8px) scale(1.08);
+      border-color: #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .carousel-slide {
+      opacity: 0;
+      display: none;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      display: block;
+      animation: slideUpIn 0.5s ease forwards;
+    }
+
+    nav {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    nav.visible {
+      transform: translateY(0);
+    }
+
+    .page-hidden {
+      display: none;
+    }
+
+    .toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .toast-message {
+      background: #222;
+      color: #fff;
+      padding: 12px 16px;
+      border: 2px solid #fff;
+      margin-top: 8px;
+      font-size: 10px;
+      animation: fadeUp 0.3s ease;
+    }
+
+    select {
+      font-family: 'Press Start 2P', monospace;
+      min-height: 44px;
+    }
+
+    input {
+      min-height: 44px;
+    }
+
+    @media (max-width: 768px) {
+      .pixel-border {
+        border: 3px solid #fff;
+        box-shadow: 3px 3px 0 #fff;
+      }
+
+      .pixel-btn {
+        border: 2px solid #fff;
+        box-shadow: 2px 2px 0 #fff;
+        font-size: 10px;
+        padding: 12px 16px !important;
+      }
+
+      .pixel-btn:hover {
+        transform: translateY(-4px) scale(1.05);
+      }
+
+      h1 {
+        font-size: 20px !important;
+      }
+
+      h2 {
+        font-size: 16px !important;
+      }
+
+      h3 {
+        font-size: 14px !important;
+      }
+
+      p {
+        font-size: 10px !important;
+      }
+
+      .grid {
+        gap: 12px !important;
+      }
+
+      nav {
+        padding: 12px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .pixel-border {
+        border: 2px solid #fff;
+        box-shadow: 2px 2px 0 #fff;
+        padding: 12px !important;
+      }
+
+      .pixel-btn {
+        border: 2px solid #fff;
+        box-shadow: 2px 2px 0 #fff;
+        font-size: 9px;
+        padding: 12px 14px !important;
+      }
+
+      h1 {
+        font-size: 18px !important;
+      }
+
+      h2 {
+        font-size: 14px !important;
+      }
+
+      h3 {
+        font-size: 12px !important;
+      }
+
+      p {
+        font-size: 9px !important;
+      }
+
+      .grid {
+        gap: 8px !important;
+      }
+
+      input,
+      select,
+      textarea {
+        font-size: 9px;
+        padding: 10px !important;
+      }
+
+      nav {
+        padding: 8px !important;
+        gap: 8px !important;
+      }
+
+      .flex {
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+      }
+    }
+  </style>
+  <script src="./lucide.min.js.download"></script>
+  <script src="./local_data_sdk.js" type="text/javascript"></script>
+  <script src="./resizing_sdk.js.download" type="text/javascript"></script>
+  <style>
+    *,
+    ::before,
+    ::after {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      border-color: #e5e7eb
+    }
+
+    ::after,
+    ::before {
+      --tw-content: ''
+    }
+
+    :host,
+    html {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -moz-tab-size: 4;
+      tab-size: 4;
+      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+      margin: 0;
+      line-height: inherit
+    }
+
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px
+    }
+
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    input:where([type=button]),
+    input:where([type=reset]),
+    input:where([type=submit]) {
+      -webkit-appearance: button;
+      background-color: transparent;
+      background-image: none
+    }
+
+    :-moz-focusring {
+      outline: auto
+    }
+
+    :-moz-ui-invalid {
+      box-shadow: none
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      outline-offset: -2px
+    }
+
+    ::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    summary {
+      display: list-item
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+      margin: 0
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0
+    }
+
+    legend {
+      padding: 0
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    dialog {
+      padding: 0
+    }
+
+    textarea {
+      resize: vertical
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    [role=button],
+    button {
+      cursor: pointer
+    }
+
+    :disabled {
+      cursor: default
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+      vertical-align: middle
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+      display: none
+    }
+
+    .visible {
+      visibility: visible
+    }
+
+    .fixed {
+      position: fixed
+    }
+
+    .relative {
+      position: relative
+    }
+
+    .inset-0 {
+      inset: 0px
+    }
+
+    .left-0 {
+      left: 0px
+    }
+
+    .right-0 {
+      right: 0px
+    }
+
+    .top-0 {
+      top: 0px
+    }
+
+    .z-10 {
+      z-index: 10
+    }
+
+    .z-50 {
+      z-index: 50
+    }
+
+    .col-span-12 {
+      grid-column: span 12 / span 12
+    }
+
+    .mx-4 {
+      margin-left: 1rem;
+      margin-right: 1rem
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem
+    }
+
+    .mb-3 {
+      margin-bottom: 0.75rem
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem
+    }
+
+    .mt-1 {
+      margin-top: 0.25rem
+    }
+
+    .mt-12 {
+      margin-top: 3rem
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem
+    }
+
+    .mt-4 {
+      margin-top: 1rem
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem
+    }
+
+    .mt-8 {
+      margin-top: 2rem
+    }
+
+    .block {
+      display: block
+    }
+
+    .flex {
+      display: flex
+    }
+
+    .grid {
+      display: grid
+    }
+
+    .hidden {
+      display: none
+    }
+
+    .h-24 {
+      height: 6rem
+    }
+
+    .h-3 {
+      height: 0.75rem
+    }
+
+    .h-32 {
+      height: 8rem
+    }
+
+    .h-40 {
+      height: 10rem
+    }
+
+    .h-full {
+      height: 100%
+    }
+
+    .min-h-\[400px\] {
+      min-height: 400px
+    }
+
+    .min-h-screen {
+      min-height: 100vh
+    }
+
+    .w-3 {
+      width: 0.75rem
+    }
+
+    .w-full {
+      width: 100%
+    }
+
+    .max-w-2xl {
+      max-width: 42rem
+    }
+
+    .max-w-4xl {
+      max-width: 56rem
+    }
+
+    .max-w-5xl {
+      max-width: 64rem
+    }
+
+    .max-w-6xl {
+      max-width: 72rem
+    }
+
+    .max-w-lg {
+      max-width: 32rem
+    }
+
+    .max-w-md {
+      max-width: 28rem
+    }
+
+    .max-w-sm {
+      max-width: 24rem
+    }
+
+    .max-w-xs {
+      max-width: 20rem
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0
+    }
+
+    .cursor-pointer {
+      cursor: pointer
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr))
+    }
+
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .flex-col {
+      flex-direction: column
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    .justify-start {
+      justify-content: flex-start
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .gap-2 {
+      gap: 0.5rem
+    }
+
+    .gap-3 {
+      gap: 0.75rem
+    }
+
+    .gap-4 {
+      gap: 1rem
+    }
+
+    .gap-6 {
+      gap: 1.5rem
+    }
+
+    .space-y-2> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
+    }
+
+    .overflow-hidden {
+      overflow: hidden
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem
+    }
+
+    .rounded-full {
+      border-radius: 9999px
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem
+    }
+
+    .border-2 {
+      border-width: 2px
+    }
+
+    .border-b-4 {
+      border-bottom-width: 4px
+    }
+
+    .border-t-2 {
+      border-top-width: 2px
+    }
+
+    .border-white {
+      --tw-border-opacity: 1;
+      border-color: rgb(255 255 255 / var(--tw-border-opacity, 1))
+    }
+
+    .border-white\/20 {
+      border-color: rgb(255 255 255 / 0.2)
+    }
+
+    .bg-black {
+      --tw-bg-opacity: 1;
+      background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-black\/80 {
+      background-color: rgb(0 0 0 / 0.8)
+    }
+
+    .bg-gray-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-700 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-900 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gradient-to-b {
+      background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
+    }
+
+    .from-transparent {
+      --tw-gradient-from: transparent var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .to-black {
+      --tw-gradient-to: #000 var(--tw-gradient-to-position)
+    }
+
+    .p-3 {
+      padding: 0.75rem
+    }
+
+    .p-4 {
+      padding: 1rem
+    }
+
+    .p-6 {
+      padding: 1.5rem
+    }
+
+    .p-8 {
+      padding: 2rem
+    }
+
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem
+    }
+
+    .text-left {
+      text-align: left
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem
+    }
+
+    .text-5xl {
+      font-size: 3rem;
+      line-height: 1
+    }
+
+    .text-6xl {
+      font-size: 3.75rem;
+      line-height: 1
+    }
+
+    .text-9xl {
+      font-size: 8rem;
+      line-height: 1
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem
+    }
+
+    .font-bold {
+      font-weight: 700
+    }
+
+    .leading-loose {
+      line-height: 2
+    }
+
+    .leading-relaxed {
+      line-height: 1.625
+    }
+
+    .text-black {
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+    }
+
+    .text-cyan-300 {
+      --tw-text-opacity: 1;
+      color: rgb(103 232 249 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-400 {
+      --tw-text-opacity: 1;
+      color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+    }
+
+    .text-green-300 {
+      --tw-text-opacity: 1;
+      color: rgb(134 239 172 / var(--tw-text-opacity, 1))
+    }
+
+    .text-purple-300 {
+      --tw-text-opacity: 1;
+      color: rgb(216 180 254 / var(--tw-text-opacity, 1))
+    }
+
+    .text-purple-400 {
+      --tw-text-opacity: 1;
+      color: rgb(192 132 252 / var(--tw-text-opacity, 1))
+    }
+
+    .text-red-300 {
+      --tw-text-opacity: 1;
+      color: rgb(252 165 165 / var(--tw-text-opacity, 1))
+    }
+
+    .text-red-400 {
+      --tw-text-opacity: 1;
+      color: rgb(248 113 113 / var(--tw-text-opacity, 1))
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    }
+
+    .text-yellow-300 {
+      --tw-text-opacity: 1;
+      color: rgb(253 224 71 / var(--tw-text-opacity, 1))
+    }
+
+    .placeholder-gray-500::placeholder {
+      --tw-placeholder-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-placeholder-opacity, 1))
+    }
+
+    .hover\:bg-opacity-80:hover {
+      --tw-bg-opacity: 0.8
+    }
+
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .md\:flex-row {
+        flex-direction: row
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:col-span-4 {
+        grid-column: span 4 / span 4
+      }
+
+      .lg\:mb-12 {
+        margin-bottom: 3rem
+      }
+
+      .lg\:mb-4 {
+        margin-bottom: 1rem
+      }
+
+      .lg\:mb-6 {
+        margin-bottom: 1.5rem
+      }
+
+      .lg\:mb-8 {
+        margin-bottom: 2rem
+      }
+
+      .lg\:mt-10 {
+        margin-top: 2.5rem
+      }
+
+      .lg\:mt-12 {
+        margin-top: 3rem
+      }
+
+      .lg\:mt-6 {
+        margin-top: 1.5rem
+      }
+
+      .lg\:mt-8 {
+        margin-top: 2rem
+      }
+
+      .lg\:h-56 {
+        height: 14rem
+      }
+
+      .lg\:min-h-\[600px\] {
+        min-height: 600px
+      }
+
+      .lg\:flex-row {
+        flex-direction: row
+      }
+
+      .lg\:gap-0 {
+        gap: 0px
+      }
+
+      .lg\:gap-3 {
+        gap: 0.75rem
+      }
+
+      .lg\:gap-4 {
+        gap: 1rem
+      }
+
+      .lg\:gap-8 {
+        gap: 2rem
+      }
+
+      .lg\:p-6 {
+        padding: 1.5rem
+      }
+
+      .lg\:p-8 {
+        padding: 2rem
+      }
+
+      .lg\:px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem
+      }
+
+      .lg\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+      }
+
+      .lg\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem
+      }
+
+      .lg\:py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem
+      }
+
+      .lg\:py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem
+      }
+
+      .lg\:py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem
+      }
+
+      .lg\:py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem
+      }
+
+      .lg\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem
+      }
+
+      .lg\:text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem
+      }
+
+      .lg\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem
+      }
+
+      .lg\:text-9xl {
+        font-size: 8rem;
+        line-height: 1
+      }
+
+      .lg\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
+      }
+
+      .lg\:text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem
+      }
+
+      .lg\:text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem
+      }
+    }
+  </style>
+  <style>
+    .min-h-screen {
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh)) !important;
+    }
+  </style>
+</head>
+
+<body data-template-id="__page-root" class="min-h-screen"
+  style="min-height: 768px; background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) !important; background-clip: border-box !important; background-size: 100vw 100vh !important;">
+  <nav
+    class="fixed top-0 left-0 right-0 w-full bg-black border-b-4 border-white z-50 px-4 lg:px-8 py-3 lg:py-4 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-0 visible"
+    style="box-shadow: 0 4px 20px rgba(0,0,0,0.8);">
+    <div class="flex items-center gap-2 lg:gap-3">
+      <img data-template-id="navbar-logo-image" class="canva-image" style="height: 40px; width: auto; lg:height:50px;"
+        loading="lazy" alt="KMPk Kolej Matrikulasi Perak logo" src="./c7abea79bba0326d90b4ad812ff066a7.png">
+      <h2 data-template-id="navbar-logo" class="canva-text text-white font-bold text-xs lg:text-sm"
+        style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.875rem !important;"
+        data-canva-font-size="0.875rem">QuestWork</h2>
+    </div>
+    <div id="navbar-quest-giver-menu" class="hidden flex gap-2 lg:gap-4 flex-wrap justify-center">
+      <button id="navbar-quest-btn" data-template-id="navbar-quest-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">QUEST</button>
+      <button id="navbar-players-btn" data-template-id="navbar-players-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">PLAYERS</button>
+      <button id="navbar-character-btn" data-template-id="navbar-character-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">CHARACTER</button>
+    </div>
+    <div id="navbar-player-menu" class="hidden flex gap-2 lg:gap-4 flex-wrap justify-center">
+      <button id="navbar-kerja-btn" data-template-id="navbar-kerja-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">WORK</button>
+      <button id="navbar-kedai-btn" data-template-id="navbar-kedai-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">SHOP</button>
+      <button id="navbar-story-btn" data-template-id="navbar-story-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">STORY</button>
+      <button id="navbar-raid-btn" data-template-id="navbar-raid-button"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">RAID</button>
+      <button id="navbar-character-btn-player" data-template-id="navbar-character-button-player"
+        class="canva-button pixel-btn px-3 py-2 lg:px-4 lg:py-2 text-xs" data-canva-font-size="0.75rem"
+        style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">CHARACTER</button>
+    </div>
+  </nav><!-- PAGE: LANDING -->
+  <div id="page-landing">
+    <header class="relative overflow-hidden bg-gradient-to-b from-transparent to-black"
+      style="min-height: calc(85 * min(var(--vh, 1vh), 1vh)); margin-top: 70px; lg:margin-top:80px;">
+      <main class="relative z-10 flex flex-col items-center justify-center text-center px-4 lg:px-6"
+        style="min-height: calc(85 * min(var(--vh, 1vh), 1vh));">
+        <div id="hero-view" class="w-full flex flex-col items-center">
+          <h1 data-template-id="hero-title" class="canva-text animate-up leading-relaxed text-2xl lg:text-4xl"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 2.25rem !important;"
+            data-canva-font-size="2.25rem">Work. Level Up. Raid.</h1>
+          <p data-template-id="hero-subtitle"
+            class="canva-text mt-4 lg:mt-6 max-w-2xl animate-up delay-1 leading-loose text-center text-xs lg:text-sm"
+            data-canva-font-size="0.6875rem"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(204, 204, 204) !important; --canva-color: #ccccccff; caret-color: rgb(204, 204, 204) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;">
+            Turn your daily work into epic quests. Collect coins &amp; XP, buy legendary weapons, and raid dungeons with
+            friends!</p><button id="start-quest-btn" data-template-id="hero-cta"
+            class="canva-button mt-6 lg:mt-10 px-4 py-3 lg:px-6 lg:py-4 pixel-btn animate-up delay-2 text-xs lg:text-sm"
+            data-canva-font-size="0.75rem"
+            style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">►
+            START QUEST</button>
+        </div>
+        <div id="role-select-view" class="w-full hidden flex flex-col items-center justify-center">
+          <h1 data-template-id="role-select-title"
+            class="canva-text animate-up leading-relaxed mb-8 lg:mb-12 text-2xl lg:text-3xl"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 2.25rem !important;"
+            data-canva-font-size="2.25rem">Choose Your Role</h1>
+          <div class="flex flex-col md:flex-row gap-4 lg:gap-8 items-center justify-center">
+            <article data-template-id="role-quest-giver"
+              class="canva-card pixel-border animate-up delay-1 overflow-hidden pixel-card w-full max-w-xs cursor-pointer"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-40 lg:h-56 flex items-center justify-center text-6xl lg:text-9xl">
+                👑
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="role-quest-giver-title"
+                  class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">QUEST GIVER</h3>
+                <p data-template-id="role-quest-giver-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Create quests for your teammates. Assign tasks and monitor their progress!</p>
+              </div>
+            </article>
+            <article data-template-id="role-player"
+              class="canva-card pixel-border animate-up delay-2 overflow-hidden pixel-card w-full max-w-xs cursor-pointer"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-40 lg:h-56 flex items-center justify-center text-6xl lg:text-9xl">
+                🗡️
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="role-player-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">PLAYER</h3>
+                <p data-template-id="role-player-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Accept quests from teammates. Complete tasks and earn rewards!</p>
+              </div>
+            </article>
+          </div><button id="back-btn" data-template-id="back-button"
+            class="canva-button mt-8 lg:mt-12 px-4 py-3 lg:px-6 lg:py-4 pixel-btn animate-up delay-3 text-xs lg:text-sm"
+            data-canva-font-size="0.75rem"
+            style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+            BACK</button>
+        </div>
+        <div id="qg-pin-view" class="w-full hidden flex flex-col items-center justify-center px-4">
+          <div class="text-6xl lg:text-9xl mb-6 lg:mb-8 animate-up">
+            👑
+          </div>
+          <h1 data-template-id="qg-pin-title"
+            class="canva-text animate-up delay-1 leading-relaxed mb-8 lg:mb-12 text-xl lg:text-2xl"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+            data-canva-font-size="1.75rem">Enter Quest Giver PIN</h1>
+          <div class="w-full max-w-md">
+            <div class="flex flex-col gap-3 mb-4 lg:mb-6 animate-up delay-2">
+              <div class="text-left">
+                <label data-template-id="qg-pin-label" for="qg-pin-input"
+                  class="canva-text block mb-2 text-xs lg:text-sm" data-canva-font-size="0.625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">PIN</label>
+                <input id="qg-pin-input" type="password" placeholder="Enter PIN"
+                  class="w-full px-3 py-2 lg:px-4 lg:py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 text-xs lg:text-sm"
+                  style="font-family: &#39;Press Start 2P&#39;, monospace;">
+              </div>
+            </div><button id="qg-pin-submit-btn" data-template-id="qg-pin-submit-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn mb-3 lg:mb-4 animate-up delay-2 text-xs lg:text-sm"
+              data-canva-font-size="0.75rem"
+              style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">►
+              SUBMIT</button> <button id="qg-pin-back-btn" data-template-id="qg-pin-back-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn animate-up delay-3 text-xs lg:text-sm"
+              data-canva-font-size="0.75rem"
+              style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+              BACK</button>
+          </div>
+        </div>
+        <div id="class-select-view" class="w-full hidden flex flex-col items-center justify-center px-4">
+          <h1 data-template-id="class-select-title"
+            class="canva-text animate-up leading-relaxed mb-8 lg:mb-12 text-2xl lg:text-3xl"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 2.25rem !important;"
+            data-canva-font-size="2.25rem">Choose Your Class</h1>
+          <div class="flex flex-col md:flex-row gap-4 lg:gap-8 items-center justify-center">
+            <article data-template-id="class-fighter"
+              class="canva-card pixel-border animate-up delay-1 overflow-hidden pixel-card w-full max-w-xs cursor-pointer"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-40 lg:h-56 flex items-center justify-center text-6xl lg:text-9xl">
+                ⚔️
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="class-fighter-title"
+                  class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">FIGHTER</h3>
+                <p data-template-id="class-fighter-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Powerful warrior with devastating attacks!</p>
+              </div>
+            </article>
+            <article data-template-id="class-mage"
+              class="canva-card pixel-border animate-up delay-2 overflow-hidden pixel-card w-full max-w-xs cursor-pointer"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-40 lg:h-56 flex items-center justify-center text-6xl lg:text-9xl">
+                🔮
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="class-mage-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">MAGE</h3>
+                <p data-template-id="class-mage-desc" class="canva-text text-center leading-relaxed text-2xs lg:text-xs"
+                  data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Sorcerer with amazing magical power!</p>
+              </div>
+            </article>
+            <article data-template-id="class-rogue"
+              class="canva-card pixel-border animate-up delay-3 overflow-hidden pixel-card w-full max-w-xs cursor-pointer"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-40 lg:h-56 flex items-center justify-center text-6xl lg:text-9xl">
+                🗡️
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="class-rogue-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">ROGUE</h3>
+                <p data-template-id="class-rogue-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Silent assassin with quick and nimble movements!</p>
+              </div>
+            </article>
+          </div><button id="class-back-btn" data-template-id="class-back-button"
+            class="canva-button mt-8 lg:mt-12 px-4 py-3 lg:px-6 lg:py-4 pixel-btn animate-up delay-3 text-xs lg:text-sm"
+            data-canva-font-size="0.75rem"
+            style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+            BACK</button>
+        </div>
+      </main>
+    </header>
+    <section class="px-4 lg:px-6 py-12 lg:py-20 max-w-5xl mx-auto">
+      <h2 data-template-id="features-heading"
+        class="canva-text text-center mb-8 lg:mb-12 animate-up text-xl lg:text-2xl"
+        style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.5rem !important;"
+        data-canva-font-size="1.5rem">HOW IT WORKS</h2>
+      <div class="relative bg-black rounded-2xl p-4 lg:p-6 overflow-hidden">
+        <div class="flex items-center justify-center min-h-[400px] lg:min-h-[600px] relative">
+          <div id="carousel" class="relative w-full flex items-center justify-center">
+            <article data-template-id="card-quest"
+              class="canva-card pixel-border animate-up delay-1 overflow-hidden pixel-card carousel-slide active w-full max-w-sm flex-shrink-0"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-32 lg:h-56 flex items-center justify-center text-5xl lg:text-9xl">
+                💼
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="card-quest-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">COMPLETE QUEST</h3>
+                <p data-template-id="card-quest-desc" class="canva-text text-center leading-relaxed text-2xs lg:text-xs"
+                  data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Each work assignment is a quest given to you. Get ready to earn Coins and XP!</p>
+              </div>
+            </article>
+            <article data-template-id="card-weapons"
+              class="canva-card pixel-border animate-up delay-2 overflow-hidden pixel-card carousel-slide w-full max-w-sm flex-shrink-0"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-32 lg:h-56 flex items-center justify-center text-5xl lg:text-9xl">
+                ⚔️
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="card-weapons-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">BUY WEAPONS</h3>
+                <p data-template-id="card-weapons-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Use coins to unlock swords, shields, and epic weapons!</p>
+              </div>
+            </article>
+            <article data-template-id="card-dungeon"
+              class="canva-card pixel-border animate-up delay-3 overflow-hidden pixel-card carousel-slide w-full max-w-sm flex-shrink-0"
+              style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+              <div class="w-full h-32 lg:h-56 flex items-center justify-center text-5xl lg:text-9xl">
+                🏴
+              </div>
+              <div class="p-4 lg:p-8">
+                <h3 data-template-id="card-dungeon-title" class="canva-text mb-2 lg:mb-4 text-center text-xs lg:text-sm"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.6875rem !important;"
+                  data-canva-font-size="0.6875rem">RAID DUNGEON</h3>
+                <p data-template-id="card-dungeon-desc"
+                  class="canva-text text-center leading-relaxed text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(170, 170, 170) !important; --canva-color: #aaaaaaff; caret-color: rgb(170, 170, 170) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+                  Invite your teammates to raid dungeons together. Defeat the boss!</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="flex items-center justify-between mt-6 lg:mt-8 px-2 lg:px-4">
+          <button id="prev-slide" class="pixel-btn px-2 lg:px-4 py-2 text-white text-xs lg:text-sm"
+            aria-label="Previous">◀</button>
+          <div id="slide-indicators" class="flex gap-2 justify-center">
+            <button class="carousel-indicator w-3 h-3 bg-white rounded-full active" data-slide="0"
+              aria-label="Slide 1"></button> <button class="carousel-indicator w-3 h-3 bg-gray-500 rounded-full"
+              data-slide="1" aria-label="Slide 2"></button> <button
+              class="carousel-indicator w-3 h-3 bg-gray-500 rounded-full" data-slide="2" aria-label="Slide 3"></button>
+          </div><button id="next-slide" class="pixel-btn px-2 lg:px-4 py-2 text-white text-xs lg:text-sm"
+            aria-label="Next">▶</button>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center py-8 lg:py-10 border-t-2 border-white/20 px-4">
+      <p data-template-id="footer-text" class="canva-text text-2xs lg:text-xs"
+        style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(102, 102, 102) !important; --canva-color: #666666ff; caret-color: rgb(102, 102, 102) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5rem !important;"
+        data-canva-font-size="0.5rem"><canva-span style="color: initial">©</canva-span> 2026 QUEST WORK — WORK WHILE
+        ADVENTURING</p>
+    </footer>
+  </div><!-- PAGE: CHARACTER (Auth + Character + Create Quest + Players List + Kerja) -->
+  <div id="page-character" class="page-hidden" style="margin-top: 70px; lg:margin-top:100px;">
+    <main class="flex flex-col items-center justify-center text-center px-4 lg:px-6 py-12 lg:py-20">
+      <!-- AUTH VIEW -->
+      <div id="auth-view" class="w-full flex flex-col items-center">
+        <div class="text-6xl lg:text-9xl mb-6 lg:mb-8 animate-up">
+          🎮
+        </div>
+        <h1 data-template-id="auth-title" class="canva-text animate-up delay-1 mb-4 lg:mb-6 text-xl lg:text-2xl"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 2rem !important;"
+          data-canva-font-size="2rem">QUEST ACCOUNT</h1>
+        <div class="w-full max-w-md">
+          <div id="register-form" class="animate-up delay-2">
+            <h2 data-template-id="register-heading" class="canva-text mb-4 lg:mb-6 text-sm lg:text-base"
+              style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.125rem !important;"
+              data-canva-font-size="1.125rem">CREATE NEW ACCOUNT</h2>
+            <div class="flex flex-col gap-3 mb-4 lg:mb-6">
+              <div class="text-left">
+                <label data-template-id="register-username-label" for="register-username"
+                  class="canva-text block mb-2 text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">USERNAME</label>
+                <input id="register-username" type="text" placeholder="Username"
+                  class="w-full px-3 py-2 lg:px-4 lg:py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 text-xs lg:text-sm"
+                  style="font-family: &#39;Press Start 2P&#39;, monospace;">
+              </div>
+              <div class="text-left">
+                <label data-template-id="register-pin-label" for="register-pin"
+                  class="canva-text block mb-2 text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">PIN
+                  (4 DIGITS)</label> <input id="register-pin" type="password" placeholder="PIN (4 digits)"
+                  class="w-full px-3 py-2 lg:px-4 lg:py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 text-xs lg:text-sm"
+                  style="font-family: &#39;Press Start 2P&#39;, monospace;">
+              </div>
+            </div><button id="register-btn" data-template-id="register-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn mb-3 lg:mb-4 text-xs lg:text-sm"
+              data-canva-font-size="0.75rem"
+              style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">►
+              REGISTER</button>
+            <p data-template-id="auth-toggle-text" class="canva-text mb-3 lg:mb-4 text-2xs lg:text-xs"
+              data-canva-font-size="0.5625rem"
+              style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(204, 204, 204) !important; --canva-color: #ccccccff; caret-color: rgb(204, 204, 204) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+              Already have an account?</p><button id="toggle-login-btn" data-template-id="toggle-login-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn text-xs lg:text-sm" data-canva-font-size="0.625rem"
+              style="background-image: linear-gradient(rgb(255, 221, 0), rgb(255, 221, 0)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">LOGIN
+              HERE</button>
+          </div>
+          <div id="login-form" class="hidden animate-up delay-2">
+            <h2 data-template-id="login-heading" class="canva-text mb-4 lg:mb-6 text-sm lg:text-base"
+              style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.125rem !important;"
+              data-canva-font-size="1.125rem">LOGIN ACCOUNT</h2>
+            <div class="flex flex-col gap-3 mb-4 lg:mb-6">
+              <div class="text-left">
+                <label data-template-id="login-username-label" for="login-username"
+                  class="canva-text block mb-2 text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">USERNAME</label>
+                <input id="login-username" type="text" placeholder="Username"
+                  class="w-full px-3 py-2 lg:px-4 lg:py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 text-xs lg:text-sm"
+                  style="font-family: &#39;Press Start 2P&#39;, monospace;">
+              </div>
+              <div class="text-left">
+                <label data-template-id="login-pin-label" for="login-pin"
+                  class="canva-text block mb-2 text-2xs lg:text-xs" data-canva-font-size="0.5625rem"
+                  style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">PIN</label>
+                <input id="login-pin" type="password" placeholder="PIN"
+                  class="w-full px-3 py-2 lg:px-4 lg:py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 text-xs lg:text-sm"
+                  style="font-family: &#39;Press Start 2P&#39;, monospace;">
+              </div>
+            </div><button id="login-btn" data-template-id="login-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn mb-3 lg:mb-4 text-xs lg:text-sm"
+              data-canva-font-size="0.75rem"
+              style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">►
+              LOGIN</button>
+            <p data-template-id="auth-toggle-text-2" class="canva-text mb-3 lg:mb-4 text-2xs lg:text-xs"
+              data-canva-font-size="0.5625rem"
+              style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(204, 204, 204) !important; --canva-color: #ccccccff; caret-color: rgb(204, 204, 204) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.5625rem !important;">
+              Don't have an account yet?</p><button id="toggle-register-btn" data-template-id="toggle-register-button"
+              class="canva-button w-full px-4 py-3 lg:py-2 pixel-btn text-xs lg:text-sm" data-canva-font-size="0.625rem"
+              style="background-image: linear-gradient(rgb(255, 221, 0), rgb(255, 221, 0)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">REGISTER
+              HERE</button>
+          </div>
+        </div><button id="auth-back-btn" data-template-id="auth-back-button"
+          class="canva-button mt-8 lg:mt-12 px-4 py-3 lg:px-6 lg:py-4 pixel-btn animate-up delay-3 text-xs lg:text-sm"
+          data-canva-font-size="0.75rem"
+          style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+          BACK</button>
+      </div><!-- CHARACTER VIEW -->
+      <div id="character-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          👑
+        </div>
+        <h1 data-template-id="character-page-title" class="canva-text animate-up delay-1 mb-2"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">CHARACTER</h1>
+        <p id="logged-in-user" class="text-sm mb-6 text-yellow-300"></p>
+        <p data-template-id="character-page-desc" class="canva-text animate-up delay-2 max-w-lg leading-loose mb-12"
+          data-canva-font-size="0.625rem"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(204, 204, 204) !important; --canva-color: #ccccccff; caret-color: rgb(204, 204, 204) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">
+          View your character statistics and progress here.</p><button id="logout-btn" data-template-id="logout-button"
+          class="canva-button mb-8 px-4 py-2 pixel-btn animate-up delay-3" data-canva-font-size="0.75rem"
+          style="background-image: linear-gradient(rgb(255, 107, 107), rgb(255, 107, 107)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">LOGOUT</button>
+        <!-- Quest Giver Stats -->
+        <div id="questgiver-stats" class="hidden w-full max-w-md animate-up">
+          <div data-template-id="char-stat-quests" class="canva-card pixel-border p-6 rounded-xl"
+            style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-clip: border-box !important;">
+            <div class="text-4xl mb-4">
+              📜
+            </div>
+            <h3 data-template-id="char-stat-quests-label" class="canva-text mb-2"
+              style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;"
+              data-canva-font-size="0.625rem">QUESTS</h3>
+            <p id="quests-count-display" class="text-yellow-300 text-2xl"></p>
+          </div>
+        </div><!-- Player Stats -->
+        <div id="player-stats" class="hidden w-full max-w-6xl animate-up">
+          <div class="grid grid-cols-12 gap-6">
+            <!-- LEFT: Equipment Grid (4 cols) -->
+            <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+              <h3 class="canva-text text-left text-sm mb-2">⚔️ INVENTORY</h3>
+              <div data-template-id="armor-helmet"
+                class="canva-card pixel-border p-3 rounded-lg cursor-pointer hover:bg-opacity-80"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p class="text-2xs text-gray-400 mb-1" style="font-size:8px;">HELM</p>
+                <p class="text-xl mb-1">🪖</p>
+                <p id="helmet-name" class="text-xs text-yellow-300 font-bold">-</p>
+                <p id="helmet-stat" class="text-2xs text-gray-400 mt-1" style="font-size:8px;">DEF +0</p><select
+                  id="helmet-select" class="w-full mt-2 px-2 py-1 bg-gray-900 border-1 border-white text-white text-2xs"
+                  style="font-family:&#39;Press Start 2P&#39;,monospace;font-size:8px;"></select>
+              </div>
+              <div data-template-id="armor-chest"
+                class="canva-card pixel-border p-3 rounded-lg cursor-pointer hover:bg-opacity-80"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p class="text-2xs text-gray-400 mb-1" style="font-size:8px;">CHEST</p>
+                <p class="text-xl mb-1">🛡️</p>
+                <p id="chest-name" class="text-xs text-yellow-300 font-bold">-</p>
+                <p id="chest-stat" class="text-2xs text-gray-400 mt-1" style="font-size:8px;">DEF +0</p><select
+                  id="chest-select" class="w-full mt-2 px-2 py-1 bg-gray-900 border-1 border-white text-white text-2xs"
+                  style="font-family:&#39;Press Start 2P&#39;,monospace;font-size:8px;"></select>
+              </div>
+              <div data-template-id="armor-weapon"
+                class="canva-card pixel-border p-3 rounded-lg cursor-pointer hover:bg-opacity-80"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p class="text-2xs text-gray-400 mb-1" style="font-size:8px;">WEAPON</p>
+                <p class="text-xl mb-1">⚔️</p>
+                <p id="weapon-name" class="text-xs text-yellow-300 font-bold">-</p>
+                <p id="weapon-stat" class="text-2xs text-gray-400 mt-1" style="font-size:8px;">DMG +0</p><select
+                  id="weapon-select" class="w-full mt-2 px-2 py-1 bg-gray-900 border-1 border-white text-white text-2xs"
+                  style="font-family:&#39;Press Start 2P&#39;,monospace;font-size:8px;"></select>
+              </div>
+              <div data-template-id="armor-pants"
+                class="canva-card pixel-border p-3 rounded-lg cursor-pointer hover:bg-opacity-80"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p class="text-2xs text-gray-400 mb-1" style="font-size:8px;">PANTS</p>
+                <p class="text-xl mb-1">👖</p>
+                <p id="pants-name" class="text-xs text-yellow-300 font-bold">-</p>
+                <p id="pants-stat" class="text-2xs text-gray-400 mt-1" style="font-size:8px;">DEF +0</p><select
+                  id="pants-select" class="w-full mt-2 px-2 py-1 bg-gray-900 border-1 border-white text-white text-2xs"
+                  style="font-family:&#39;Press Start 2P&#39;,monospace;font-size:8px;"></select>
+              </div>
+              <div data-template-id="armor-boots"
+                class="canva-card pixel-border p-3 rounded-lg cursor-pointer hover:bg-opacity-80"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p class="text-2xs text-gray-400 mb-1" style="font-size:8px;">BOOTS</p>
+                <p class="text-xl mb-1">👢</p>
+                <p id="boots-name" class="text-xs text-yellow-300 font-bold">-</p>
+                <p id="boots-stat" class="text-2xs text-gray-400 mt-1" style="font-size:8px;">DEF +0</p><select
+                  id="boots-select" class="w-full mt-2 px-2 py-1 bg-gray-900 border-1 border-white text-white text-2xs"
+                  style="font-family:&#39;Press Start 2P&#39;,monospace;font-size:8px;"></select>
+              </div>
+            </div><!-- CENTER: Character Display (4 cols) -->
+            <div class="col-span-12 lg:col-span-4 flex flex-col items-center justify-start">
+              <div data-template-id="char-portrait" class="canva-card pixel-border p-6 rounded-xl w-full"
+                style="background-image: linear-gradient(135deg, rgb(88, 28, 135), rgb(0, 0, 0)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial; aspect-ratio: 1 / 1.3; display: flex; align-items: center; justify-content: center;">
+                <div class="flex flex-col items-center justify-center w-full h-full">
+                  <div class="text-6xl mb-3">
+                    👤
+                  </div>
+                  <p id="player-class-display" class="text-yellow-300 text-xs font-bold">WARRIOR</p>
+                  <p id="player-level-display" class="text-white text-xs mt-1">LV <span id="char-level-val">1</span></p>
+                  <div class="mt-4 w-full px-3">
+                    <div
+                      style="background:#0a0a0a;height:14px;border:2px solid #fff;overflow:hidden;margin-bottom:2px;">
+                      <div id="hp-bar"
+                        style="background:linear-gradient(90deg,#ff3333,#ff6b6b);height:100%;width:100%;"></div>
+                    </div>
+                    <p id="hp-value-display" class="text-2xs text-red-400 text-center" style="font-size:8px;">100/100
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- RIGHT: Stats (4 cols, 2x2 grid) -->
+            <div class="col-span-12 lg:col-span-4 grid grid-cols-2 gap-3">
+              <div data-template-id="char-stat-level-player" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-level-player-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">LEVEL</p>
+                <p id="level-value-display" class="text-2xl text-green-300 font-bold">1</p>
+                <p class="text-lg mt-1">⭐</p>
+              </div>
+              <div data-template-id="char-stat-defense" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-defense-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">DEFENSE</p>
+                <p id="defense-value-display" class="text-2xl text-cyan-300 font-bold">5</p>
+                <p class="text-lg mt-1">🛡️</p>
+              </div>
+              <div data-template-id="char-stat-damage" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-damage-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">DAMAGE</p>
+                <p id="damage-value-display" class="text-2xl text-red-400 font-bold">0</p>
+                <p class="text-lg mt-1">⚔️</p>
+              </div>
+              <div data-template-id="char-stat-magic-damage" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-magic-damage-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">MAGIC</p>
+                <p id="magic-damage-value-display" class="text-2xl text-purple-400 font-bold">0</p>
+                <p class="text-lg mt-1">🔮</p>
+              </div>
+              <div data-template-id="char-stat-coins-player" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-coins-player-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">COINS</p>
+                <p id="coins-value-display" class="text-2xl text-yellow-300 font-bold">0</p>
+                <p class="text-lg mt-1">🪙</p>
+              </div>
+              <div data-template-id="char-stat-rewardxp" class="canva-card pixel-border p-3 rounded-lg"
+                style="background-image: linear-gradient(rgb(17, 17, 17), rgb(17, 17, 17)) !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: border-box !important; background-color: initial;">
+                <p data-template-id="char-stat-rewardxp-label" class="canva-text text-2xs mb-1"
+                  style="font-size: 0.625rem !important; color: rgb(255, 255, 255) !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important;"
+                  data-canva-font-size="0.625rem">TOTAL XP</p>
+                <div style="background:#0a0a0a;height:12px;border:1px solid #fff;overflow:hidden;margin-bottom:2px;">
+                  <div id="xp-bar" style="background:linear-gradient(90deg,#ffaa00,#ffdd00);height:100%;width:0%;">
+                  </div>
+                </div>
+                <p id="rewardxp-value-display" class="text-2xs text-purple-300" style="font-size:8px;">0/1000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- CREATE QUEST VIEW (Quest Giver) -->
+      <div id="create-quest-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          ✍️
+        </div>
+        <h1 data-template-id="create-quest-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">CREATE NEW QUEST</h1>
+        <div class="w-full max-w-md">
+          <div class="flex flex-col gap-4 mb-6">
+            <div class="text-left">
+              <label data-template-id="quest-name-label" for="quest-name" class="canva-text block mb-2"
+                data-canva-font-size="0.625rem"
+                style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">QUEST
+                NAME</label> <input id="quest-name" type="text" placeholder="Quest name"
+                class="w-full px-4 py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500"
+                style="font-family:&#39;Press Start 2P&#39;,monospace;">
+            </div>
+            <div class="text-left">
+              <label data-template-id="quest-desc-label" for="quest-desc" class="canva-text block mb-2"
+                data-canva-font-size="0.625rem"
+                style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">DESCRIPTION</label>
+              <textarea id="quest-desc" placeholder="Description"
+                class="w-full px-4 py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500 h-24"
+                style="font-family:&#39;Press Start 2P&#39;,monospace;resize:none;"></textarea>
+            </div>
+            <div class="text-left">
+              <label data-template-id="quest-reward-label" for="quest-reward" class="canva-text block mb-2"
+                data-canva-font-size="0.625rem"
+                style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">REWARD
+                (COINS)</label> <input id="quest-reward" type="number" placeholder="Reward coins"
+                class="w-full px-4 py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500"
+                style="font-family:&#39;Press Start 2P&#39;,monospace;">
+            </div>
+            <div class="text-left">
+              <label data-template-id="quest-rewardxp-label" for="quest-rewardxp" class="canva-text block mb-2"
+                data-canva-font-size="0.625rem"
+                style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">XP
+                REWARD</label> <input id="quest-rewardxp" type="number" placeholder="Reward XP"
+                class="w-full px-4 py-2 bg-gray-900 border-2 border-white text-white placeholder-gray-500"
+                style="font-family:&#39;Press Start 2P&#39;,monospace;">
+            </div>
+            <div class="text-left">
+              <label data-template-id="quest-assign-label" for="quest-assign" class="canva-text block mb-2"
+                data-canva-font-size="0.625rem"
+                style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.625rem !important;">ASSIGN
+                TO</label> <select id="quest-assign"
+                class="w-full px-4 py-2 bg-gray-900 border-2 border-white text-white text-xs"
+                style="font-family:&#39;Press Start 2P&#39;,monospace;">
+                <option value="">-- Pilih Player --</option>
+              </select>
+            </div>
+          </div><button id="create-quest-btn" data-template-id="create-quest-button"
+            class="canva-button w-full px-4 py-2 pixel-btn mb-4" data-canva-font-size="0.75rem"
+            style="background-image: linear-gradient(rgb(255, 221, 0), rgb(255, 221, 0)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">►
+            CREATE QUEST</button> <button id="quest-back-btn" data-template-id="quest-back-button"
+            class="canva-button w-full px-4 py-2 pixel-btn" data-canva-font-size="0.75rem"
+            style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+            BACK</button>
+        </div>
+        <div id="quest-list" class="mt-8 w-full max-w-md">
+          <h2 data-template-id="my-quests-heading" class="canva-text mb-4"
+            style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.875rem !important;"
+            data-canva-font-size="0.875rem">MY QUESTS</h2>
+          <div id="created-quests" class="flex flex-col gap-4"></div>
+        </div>
+      </div><!-- PLAYERS LIST VIEW (Quest Giver) -->
+      <div id="players-list-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          👥
+        </div>
+        <h1 data-template-id="players-list-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">PLAYER LIST</h1>
+        <div id="players-container" class="w-full max-w-md flex flex-col gap-4"></div><button id="players-back-btn"
+          data-template-id="players-back-button" class="canva-button mt-12 px-6 py-4 pixel-btn"
+          data-canva-font-size="0.75rem"
+          style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-clip: border-box !important; white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(0, 0, 0) !important; --canva-color: #000000ff; caret-color: rgb(0, 0, 0) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 0.75rem !important;">◄
+          BACK</button>
+      </div><!-- KERJA VIEW (Player) -->
+      <div id="kerja-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          📋
+        </div>
+        <h1 data-template-id="kerja-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">MY WORK</h1>
+        <div id="kerja-quests" class="w-full max-w-md flex flex-col gap-4"></div>
+        <p id="kerja-empty" class="text-gray-400 text-xs mt-4 hidden">Tiada quest ditugaskan kepada kamu.</p>
+      </div><!-- KEDAI VIEW (Player) -->
+      <div id="kedai-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          🏪
+        </div>
+        <h1 data-template-id="kedai-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">SHOP</h1><!-- Tab Navigation -->
+        <div class="flex gap-4 mb-8 flex-wrap justify-center">
+          <button id="kedai-tab-armor"
+            class="pixel-btn px-4 py-2 text-xs font-bold bg-white text-black kedai-tab-btn active">🛡️ ARMOR</button>
+          <button id="kedai-tab-weapon"
+            class="pixel-btn px-4 py-2 text-xs font-bold bg-gray-700 text-white kedai-tab-btn">⚔️ WEAPON</button>
+        </div><!-- ARMOR SHOP -->
+        <div id="kedai-armor-section" class="w-full max-w-4xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="armor-shop-items">
+            <!-- Dynamically populated armor items -->
+          </div>
+          <p id="armor-shop-empty" class="text-gray-400 text-xs text-center mt-4 hidden">Tiada item baju besi yang
+            tersedia untuk kelas kamu.</p>
+        </div><!-- WEAPON SHOP -->
+        <div id="kedai-weapon-section" class="w-full max-w-4xl hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="weapon-shop-items">
+            <!-- Dynamically populated weapon items -->
+          </div>
+          <p id="weapon-shop-empty" class="text-gray-400 text-xs text-center mt-4 hidden">Tiada senjata yang tersedia
+            untuk kelas kamu.</p>
+        </div>
+      </div><!-- STORY VIEW (Player) -->
+      <div id="story-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          📖
+        </div>
+        <h1 data-template-id="story-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">STORY</h1>
+        <p class="text-gray-400 text-xs mt-4">Kisah akan terbuka segera...</p>
+      </div><!-- RAID VIEW (Player) -->
+      <div id="raid-view" class="hidden w-full flex flex-col items-center">
+        <div class="text-9xl mb-8 animate-up">
+          ⚔️
+        </div>
+        <h1 data-template-id="raid-title" class="canva-text animate-up delay-1 mb-8"
+          style="white-space: pre-wrap !important; overflow-wrap: normal !important; line-height: normal !important; color: rgb(255, 255, 255) !important; --canva-color: #ffffffff; caret-color: rgb(255, 255, 255) !important; font-family: YAFyGr-8pmQ_0, auto !important; font-weight: 400 !important; font-style: normal !important; font-size: 1.75rem !important;"
+          data-canva-font-size="1.75rem">RAID DUNGEON</h1><!-- Raid Status Section -->
+        <div id="raid-cooldown-section" class="w-full max-w-md mb-8 hidden">
+          <div class="pixel-border p-4 rounded-lg text-center">
+            <p class="text-white text-xs font-bold mb-3">⏰ RAID COOLDOWN ACTIVE</p>
+            <p id="cooldown-timer" class="text-yellow-300 text-2xl font-bold mb-2">1:00:00</p>
+            <p class="text-gray-400 text-xs">You can raid again after cooldown expires</p>
+          </div>
+        </div><!-- Dungeons List -->
+        <div id="dungeons-container" class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically populated dungeons -->
+        </div>
+        <p id="raid-empty" class="text-gray-400 text-xs mt-4 hidden">No dungeons available yet...</p>
+        <!-- RAID RESULT Modal -->
+        <div id="raid-result-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+          <div class="pixel-border p-8 rounded-lg max-w-md w-full mx-4" style="background:#1a1a1a;">
+            <div class="text-center">
+              <p id="result-outcome" class="text-4xl mb-4">🎉</p>
+              <h2 id="result-title" class="canva-text text-white text-2xl font-bold mb-4">VICTORY!</h2>
+              <div id="result-rewards" class="text-left mb-6 space-y-2">
+                <p id="result-xp" class="text-yellow-300 text-xs">💎 XP Gained: 0</p>
+                <p id="result-item" class="text-purple-300 text-xs hidden">🎁 Item Dropped: -</p>
+              </div><button id="result-close-btn" class="pixel-btn px-4 py-2 text-white text-xs w-full">OK</button>
+            </div>
+          </div>
+        </div><!-- RAID REQUIREMENT FAIL Modal -->
+        <div id="raid-fail-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+          <div class="pixel-border p-8 rounded-lg max-w-md w-full mx-4" style="background:#1a1a1a;">
+            <div class="text-center">
+              <p class="text-4xl mb-4">❌</p>
+              <h2 class="canva-text text-white text-2xl font-bold mb-4">REQUIREMENT NOT MET</h2>
+              <div id="fail-requirements" class="text-left mb-6 space-y-2 text-red-300 text-xs">
+                <!-- Dynamically populated -->
+              </div><button id="fail-close-btn" class="pixel-btn px-4 py-2 text-white text-xs w-full">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toast-container" class="toast-container"></div>
+  <script src="./editing_sdk.js.download"></script>
+  <script>
+    // 8-bit Sound Effects using Web Audio API
+    let audioContext = null;
+
+    function initAudioContext() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    // Menu/Navigation beep (standard click)
+    function playMenuBeep() {
+      initAudioContext();
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(400, now);
+      osc.frequency.exponentialRampToValueAtTime(250, now + 0.08);
+      gain.gain.setValueAtTime(0.2, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+      osc.start(now);
+      osc.stop(now + 0.08);
+    }
+
+    // Coin/Purchase sound (buying items)
+    function playCoinSound() {
+      initAudioContext();
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      // First beep (higher pitch)
+      const osc1 = audioContext.createOscillator();
+      const gain1 = audioContext.createGain();
+      osc1.connect(gain1);
+      gain1.connect(audioContext.destination);
+      osc1.frequency.setValueAtTime(800, now);
+      gain1.gain.setValueAtTime(0.25, now);
+      gain1.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+      osc1.start(now);
+      osc1.stop(now + 0.1);
+
+      // Second beep (even higher)
+      const osc2 = audioContext.createOscillator();
+      const gain2 = audioContext.createGain();
+      osc2.connect(gain2);
+      gain2.connect(audioContext.destination);
+      osc2.frequency.setValueAtTime(1200, now + 0.08);
+      gain2.gain.setValueAtTime(0.25, now + 0.08);
+      gain2.gain.exponentialRampToValueAtTime(0.01, now + 0.18);
+      osc2.start(now + 0.08);
+      osc2.stop(now + 0.18);
+    }
+
+    // Success/Approval chime (completing action)
+    function playSuccessChime() {
+      initAudioContext();
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      // Three ascending notes
+      const notes = [600, 800, 1000];
+      notes.forEach((freq, i) => {
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+        osc.frequency.setValueAtTime(freq, now + i * 0.08);
+        gain.gain.setValueAtTime(0.2, now + i * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.08 + 0.12);
+        osc.start(now + i * 0.08);
+        osc.stop(now + i * 0.08 + 0.12);
+      });
+    }
+
+    // Error/Rejection beep (reject/error)
+    function playErrorBeep() {
+      initAudioContext();
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      // Two descending notes
+      const notes = [600, 400];
+      notes.forEach((freq, i) => {
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+        osc.frequency.setValueAtTime(freq, now + i * 0.1);
+        gain.gain.setValueAtTime(0.2, now + i * 0.1);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.1 + 0.15);
+        osc.start(now + i * 0.1);
+        osc.stop(now + i * 0.1 + 0.15);
+      });
+    }
+
+    // Level up fanfare (advancement)
+    function playLevelUpFanfare() {
+      initAudioContext();
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      // Ascending scale effect
+      const notes = [500, 600, 700, 900, 1200];
+      notes.forEach((freq, i) => {
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+        osc.frequency.setValueAtTime(freq, now + i * 0.06);
+        gain.gain.setValueAtTime(0.2, now + i * 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.06 + 0.1);
+        osc.start(now + i * 0.06);
+        osc.stop(now + i * 0.06 + 0.1);
+      });
+    }
+
+    // Generic click (fallback)
+    function playButtonClickSound() {
+      playMenuBeep();
+    }
+
+    let currentUserRole = null;
+    let currentPlayerClass = null;
+    let currentUser = null;
+    let allUsers = [];
+    let allQuests = [];
+    let allData = [];
+
+    function showToast(msg) {
+      const c = document.getElementById('toast-container');
+      const t = document.createElement('div');
+      t.className = 'toast-message';
+      t.textContent = msg;
+      c.appendChild(t);
+      setTimeout(() => t.remove(), 3000);
+    }
+
+    const dataHandler = {
+      onDataChanged(data) {
+        allData = data;
+        allUsers = data.filter(d => d.username && d.pin);
+        allQuests = data.filter(d => d.name && d.reward !== undefined && d.status);
+        if (currentUser) {
+          // Refresh current view
+          const cv = document.getElementById('character-view');
+          const cqv = document.getElementById('create-quest-view');
+          const kv = document.getElementById('kerja-view');
+          const plv = document.getElementById('players-list-view');
+          const av = document.getElementById('kedai-weapon-section');
+          if (!cv.classList.contains('hidden')) {
+            if (currentUser.role === 'Quest Giver') updateQuestsCount();
+            else updatePlayerStats();
+          }
+          if (!cqv.classList.contains('hidden')) { populatePlayerDropdown(); loadUserQuests(); }
+          if (!kv.classList.contains('hidden')) loadKerjaQuests();
+          if (!plv.classList.contains('hidden')) loadPlayersList();
+          if (!av.classList.contains('hidden')) loadWeaponShop();
+          const rv = document.getElementById('raid-view');
+          if (!rv.classList.contains('hidden')) loadRaidDungeons();
+        }
+      }
+    };
+
+    async function initDataSdk() {
+      await window.dataSdk.init(dataHandler);
+    }
+
+    const pageLanding = document.getElementById('page-landing');
+    const pageCharacter = document.getElementById('page-character');
+
+    function showPage(page) {
+      pageLanding.classList.add('page-hidden');
+      pageCharacter.classList.add('page-hidden');
+      page.classList.remove('page-hidden');
+    }
+
+    function hideAllViews() {
+      document.getElementById('auth-view').classList.add('hidden');
+      document.getElementById('character-view').classList.add('hidden');
+      document.getElementById('create-quest-view').classList.add('hidden');
+      document.getElementById('players-list-view').classList.add('hidden');
+      document.getElementById('kerja-view').classList.add('hidden');
+      document.getElementById('kedai-view').classList.add('hidden');
+      document.getElementById('story-view').classList.add('hidden');
+      document.getElementById('raid-view').classList.add('hidden');
+    }
+
+    function showView(id) {
+      hideAllViews();
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    // Landing interactions
+    document.getElementById('start-quest-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      document.getElementById('hero-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.remove('hidden');
+    });
+    document.getElementById('back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      document.getElementById('role-select-view').classList.add('hidden');
+      document.getElementById('class-select-view').classList.add('hidden');
+      document.getElementById('qg-pin-view').classList.add('hidden');
+      document.getElementById('hero-view').classList.remove('hidden');
+      document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+      document.getElementById('navbar-player-menu').classList.add('hidden');
+    });
+
+    // Role selection
+    document.querySelector('[data-template-id="role-quest-giver"]').addEventListener('click', () => {
+      playButtonClickSound();
+      currentUserRole = 'Quest Giver';
+      document.getElementById('navbar-quest-giver-menu').classList.remove('hidden');
+      document.getElementById('navbar-player-menu').classList.add('hidden');
+      document.getElementById('hero-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.add('hidden');
+      document.getElementById('qg-pin-view').classList.remove('hidden');
+    });
+    document.querySelector('[data-template-id="role-player"]').addEventListener('click', () => {
+      playButtonClickSound();
+      currentUserRole = 'Player';
+      document.getElementById('role-select-view').classList.add('hidden');
+      document.getElementById('class-select-view').classList.remove('hidden');
+    });
+
+    // Class selection
+    ['fighter', 'mage', 'rogue'].forEach(cls => {
+      document.querySelector(`[data-template-id="class-${cls}"]`).addEventListener('click', () => {
+        playButtonClickSound();
+        currentPlayerClass = cls.charAt(0).toUpperCase() + cls.slice(1);
+        document.getElementById('class-select-view').classList.add('hidden');
+        document.getElementById('navbar-player-menu').classList.remove('hidden');
+        document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+        showPage(pageCharacter);
+        showView('auth-view');
+      });
+    });
+    document.getElementById('class-back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      document.getElementById('class-select-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.remove('hidden');
+      document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+      document.getElementById('navbar-player-menu').classList.add('hidden');
+    });
+
+    // QG PIN verification
+    const QG_PIN = '154235';
+    document.getElementById('qg-pin-submit-btn').addEventListener('click', async e => {
+      e.preventDefault();
+      playButtonClickSound();
+      const pin = document.getElementById('qg-pin-input').value.trim();
+      if (pin === QG_PIN) {
+        document.getElementById('qg-pin-view').classList.add('hidden');
+        showPage(pageCharacter);
+        showView('auth-view');
+        showToast('Correct PIN! Welcome Quest Giver.');
+      } else {
+        showToast('Incorrect PIN. Try again.');
+        document.getElementById('qg-pin-input').value = '';
+      }
+    });
+    document.getElementById('qg-pin-back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      document.getElementById('qg-pin-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.remove('hidden');
+      document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+      currentUserRole = null;
+    });
+
+    // Navbar buttons
+    document.getElementById('navbar-character-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showCharacterView(); });
+    document.getElementById('navbar-character-btn-player').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showCharacterView(); });
+    document.getElementById('navbar-quest-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showCreateQuestView(); });
+    document.getElementById('navbar-players-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showPlayersListView(); });
+    document.getElementById('navbar-kerja-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showKerjaView(); });
+    document.getElementById('navbar-kedai-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showView('kedai-view'); });
+    document.getElementById('navbar-story-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) showView('story-view'); });
+    document.getElementById('navbar-raid-btn').addEventListener('click', () => { playButtonClickSound(); showPage(pageCharacter); if (currentUser) { showView('raid-view'); loadRaidDungeons(); } });
+
+    // Auth
+    document.getElementById('register-btn').addEventListener('click', async e => {
+      e.preventDefault();
+      playButtonClickSound();
+      const u = document.getElementById('register-username').value.trim();
+      const p = document.getElementById('register-pin').value.trim();
+      if (u.length < 3 || !/^[a-zA-Z0-9_]+$/.test(u)) { showToast('Username min 3 chars, alphanumeric'); return; }
+      if (!/^\d{4}$/.test(p)) { showToast('PIN must be 4 digits'); return; }
+      if (allUsers.some(x => x.username.toLowerCase() === u.toLowerCase())) { showToast('Username already exists!'); return; }
+      let hp = 0, defense = 0, damage = 0, magic_damage = 0;
+      if (currentUserRole === 'Player') {
+        if (currentPlayerClass === 'Mage') { hp = 50; defense = 5; damage = 10; magic_damage = 150; }
+        else if (currentPlayerClass === 'Fighter') { hp = 150; defense = 10; damage = 50; magic_damage = 10; }
+        else if (currentPlayerClass === 'Rogue') { hp = 100; defense = 5; damage = 150; magic_damage = 5; }
+        else { hp = 100; defense = 5; damage = 0; magic_damage = 0; }
+      }
+      const rec = { username: u, pin: p, role: currentUserRole || 'Player', player_class: currentPlayerClass || '', selected_at: new Date().toISOString(), name: '', description: '', reward: 0, createdBy: '', createdAt: '', assignedTo: '', status: '', completedAt: '', hp: hp, xp: 0, level: 1, defense: defense, damage: damage, magic_damage: magic_damage, coins: 0, inventory_armor: '{"armor":[]}', inventory_weapons: '{"weapons":[]}', equipped_helmet: '', equipped_chest: '', equipped_pants: '', equipped_boots: '', equipped_weapon: '' };
+      const r = await window.dataSdk.create(rec);
+      if (r.isOk) { showToast('Account created! Please login.'); document.getElementById('register-username').value = ''; document.getElementById('register-pin').value = ''; }
+      else showToast('Registration failed');
+    });
+
+    document.getElementById('login-btn').addEventListener('click', async e => {
+      e.preventDefault();
+      playButtonClickSound();
+      const u = document.getElementById('login-username').value.trim();
+      const p = document.getElementById('login-pin').value.trim();
+      const user = allUsers.find(x => x.username && x.username.toLowerCase() === u.toLowerCase() && x.pin === p);
+      if (!user) { showToast('Incorrect username/PIN'); return; }
+      currentUser = user;
+      currentUserRole = user.role;
+      // Show correct navbar
+      if (user.role === 'Quest Giver') { document.getElementById('navbar-quest-giver-menu').classList.remove('hidden'); document.getElementById('navbar-player-menu').classList.add('hidden'); }
+      else { document.getElementById('navbar-player-menu').classList.remove('hidden'); document.getElementById('navbar-quest-giver-menu').classList.add('hidden'); }
+      showToast(`Welcome, ${user.username}!`);
+      showCharacterView();
+    });
+
+    document.getElementById('toggle-login-btn').addEventListener('click', e => { e.preventDefault(); playButtonClickSound(); document.getElementById('register-form').classList.add('hidden'); document.getElementById('login-form').classList.remove('hidden'); });
+    document.getElementById('toggle-register-btn').addEventListener('click', e => { e.preventDefault(); playButtonClickSound(); document.getElementById('login-form').classList.add('hidden'); document.getElementById('register-form').classList.remove('hidden'); });
+    document.getElementById('logout-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      currentUser = null;
+      currentUserRole = null;
+      currentPlayerClass = null;
+      // Reset to landing page with role selection visible
+      showPage(pageLanding);
+      document.getElementById('hero-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.remove('hidden');
+      document.getElementById('class-select-view').classList.add('hidden');
+      document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+      document.getElementById('navbar-player-menu').classList.add('hidden');
+      showToast('Thank you! You have logged out.');
+    });
+    document.getElementById('auth-back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      playButtonClickSound();
+      showPage(pageLanding);
+      document.getElementById('hero-view').classList.add('hidden');
+      document.getElementById('role-select-view').classList.remove('hidden');
+      document.getElementById('class-select-view').classList.add('hidden');
+      document.getElementById('navbar-quest-giver-menu').classList.add('hidden');
+      document.getElementById('navbar-player-menu').classList.add('hidden');
+    });
+
+    // Character View
+    function showCharacterView() {
+      showView('character-view');
+      document.getElementById('logged-in-user').textContent = `🎮 ${currentUser.username}`;
+      if (currentUser.role === 'Quest Giver') {
+        document.getElementById('questgiver-stats').classList.remove('hidden');
+        document.getElementById('player-stats').classList.add('hidden');
+        updateQuestsCount();
+      } else {
+        document.getElementById('questgiver-stats').classList.add('hidden');
+        document.getElementById('player-stats').classList.remove('hidden');
+        updatePlayerStats();
+      }
+    }
+
+    function updateQuestsCount() {
+      const c = allQuests.filter(q => q.createdBy === currentUser.username).length;
+      document.getElementById('quests-count-display').textContent = c;
+    }
+
+    function updatePlayerStats() {
+      const u = allUsers.find(x => x.username === currentUser.username);
+      if (!u) return;
+      const classEl = document.getElementById('player-class-display');
+      if (classEl) classEl.textContent = u.player_class || 'WARRIOR';
+      const hp = u.hp ?? 100;
+      // Determine max HP based on class
+      let maxHp = 100;
+      if (u.player_class === 'Mage') maxHp = 50;
+      else if (u.player_class === 'Fighter') maxHp = 150;
+      else if (u.player_class === 'Rogue') maxHp = 100;
+      const hpBar = document.getElementById('hp-bar');
+      const hpVal = document.getElementById('hp-value-display');
+      if (hpBar) hpBar.style.width = Math.min(hp, maxHp) / maxHp * 100 + '%';
+      if (hpVal) hpVal.textContent = `${Math.min(hp, maxHp)} / ${maxHp}`;
+      const xp = u.xp ?? 0;
+      const xpBar = document.getElementById('xp-bar');
+      const xpVal = document.getElementById('xp-value-display');
+      if (xpBar) xpBar.style.width = Math.min((xp / 1000) * 100, 100) + '%';
+      if (xpVal) xpVal.textContent = `${xp} / 1000`;
+      const lvlVal = document.getElementById('level-value-display');
+      if (lvlVal) lvlVal.textContent = u.level ?? 1;
+      const defVal = document.getElementById('defense-value-display');
+      if (defVal) defVal.textContent = u.defense ?? 5;
+      const dmgVal = document.getElementById('damage-value-display');
+      if (dmgVal) dmgVal.textContent = u.damage ?? 0;
+      const mgdmgVal = document.getElementById('magic-damage-value-display');
+      if (mgdmgVal) mgdmgVal.textContent = u.magic_damage ?? 0;
+      const coinVal = document.getElementById('coins-value-display');
+      if (coinVal) coinVal.textContent = u.coins ?? 0;
+      const xpElReward = document.getElementById('rewardxp-value-display');
+      if (xpElReward) xpElReward.textContent = `${xp} / 1000`;
+
+      // Populate equipment dropdowns and display equipped items
+      populateEquipmentDropdowns(u);
+      // Attach event listeners to the newly created dropdowns
+      attachEquipmentHandlers();
+    }
+
+    // Create Quest View
+    function showCreateQuestView() {
+      showView('create-quest-view');
+      populatePlayerDropdown();
+      loadUserQuests();
+    }
+
+    function populatePlayerDropdown() {
+      const sel = document.getElementById('quest-assign');
+      const val = sel.value;
+      sel.innerHTML = '<option value="">-- Pilih Player --</option>';
+      allUsers.filter(u => u.role === 'Player').forEach(u => {
+        const o = document.createElement('option');
+        o.value = u.username;
+        o.textContent = `${u.username} (${u.player_class || 'Player'})`;
+        sel.appendChild(o);
+      });
+      sel.value = val;
+    }
+
+    function loadUserQuests() {
+      const container = document.getElementById('created-quests');
+      const userQuests = allQuests.filter(q => q.createdBy === currentUser.username && q.status !== 'completed');
+      container.innerHTML = '';
+      if (userQuests.length === 0) { container.innerHTML = '<p class="text-gray-400 text-xs">No quests yet...</p>'; return; }
+      userQuests.forEach(quest => {
+        const el = document.createElement('div');
+        el.className = 'pixel-border p-4 rounded-lg';
+        const statusColor = quest.status === 'pending_approval' ? 'text-orange-400' : quest.status === 'completed' ? 'text-green-400' : 'text-blue-300';
+        let actions = '';
+        if (quest.status === 'assigned' || quest.status === 'pending_approval') {
+          actions = `<div class="flex gap-2 mt-3"><button class="approve-btn pixel-btn px-3 py-1 text-xs text-green-300 border-green-300" data-id="${quest.__backendId}">✓ APPROVE</button><button class="reject-btn pixel-btn px-3 py-1 text-xs text-red-300 border-red-300" data-id="${quest.__backendId}">✗ REJECT</button></div>`;
+        }
+        el.innerHTML = `<h4 class="font-bold text-left mb-2 text-white text-xs">${quest.name}</h4><p class="text-xs text-gray-300 text-left mb-1">${quest.description}</p><p class="text-xs text-gray-400 text-left">👤 ${quest.assignedTo || '-'}</p><div class="flex justify-between items-center mt-2"><span class="text-xs ${statusColor}">[${quest.status}]</span><div class="text-right"><span class="text-xs text-yellow-300 block">💰 ${quest.reward}</span><span class="text-xs text-purple-300 block">💎 ${quest.rewardXp}</span></div></div>${actions}`;
+        container.appendChild(el);
+      });
+      // Approve/Reject handlers
+      container.querySelectorAll('.approve-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          playSuccessChime();
+          const quest = allData.find(d => d.__backendId === btn.dataset.id);
+          if (!quest) return;
+          btn.disabled = true;
+          const updated = { ...quest, status: 'completed', completedAt: new Date().toISOString() };
+          const r = await window.dataSdk.update(updated);
+          if (r.isOk) {
+            // Give coins and XP to player
+            const player = allData.find(d => d.username === quest.assignedTo && d.pin);
+            if (player) {
+              const pUpdate = { ...player, coins: (player.coins || 0) + (quest.reward || 0), xp: (player.xp || 0) + (quest.rewardXp || 0), hp: Math.min(100, (player.hp || 100)) };
+              // Level up check
+              if (pUpdate.xp >= 1000) { pUpdate.level = (pUpdate.level || 1) + 1; pUpdate.xp = pUpdate.xp - 1000; pUpdate.defense = (pUpdate.defense || 5) + 2; }
+              await window.dataSdk.update(pUpdate);
+            }
+            showToast('Quest approved!');
+          }
+          btn.disabled = false;
+        });
+      });
+      container.querySelectorAll('.reject-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          playErrorBeep();
+          const quest = allData.find(d => d.__backendId === btn.dataset.id);
+          if (!quest) return;
+          btn.disabled = true;
+          const updated = { ...quest, status: 'assigned' };
+          await window.dataSdk.update(updated);
+          showToast('Quest rejected, returned to player.');
+          btn.disabled = false;
+        });
+      });
+    }
+
+    document.getElementById('create-quest-btn').addEventListener('click', async e => {
+      e.preventDefault();
+      playButtonClickSound();
+      const name = document.getElementById('quest-name').value.trim();
+      const desc = document.getElementById('quest-desc').value.trim();
+      const reward = parseInt(document.getElementById('quest-reward').value) || 0;
+      const rewardXp = parseInt(document.getElementById('quest-rewardxp').value) || 0;
+      const assignedTo = document.getElementById('quest-assign').value;
+      if (!name || !desc || reward <= 0 || rewardXp <= 0) { showToast('Fill all fields!'); return; }
+      if (!assignedTo) { showToast('Select a player!'); return; }
+      const q = { username: '', pin: '', role: '', player_class: '', selected_at: '', name, description: desc, reward, rewardXp, createdBy: currentUser.username, createdAt: new Date().toISOString(), assignedTo, status: 'assigned', completedAt: '', hp: 0, xp: 0, level: 0, defense: 0, coins: 0 };
+      const r = await window.dataSdk.create(q);
+      if (r.isOk) { showToast('Quest created!'); document.getElementById('quest-name').value = ''; document.getElementById('quest-desc').value = ''; document.getElementById('quest-reward').value = ''; document.getElementById('quest-rewardxp').value = ''; document.getElementById('quest-assign').value = ''; }
+      else showToast('Failed to create quest');
+    });
+    document.getElementById('quest-back-btn').addEventListener('click', e => { e.preventDefault(); playButtonClickSound(); showCharacterView(); });
+
+    // Players List View (Quest Giver)
+    function showPlayersListView() {
+      showView('players-list-view');
+      loadPlayersList();
+    }
+    function loadPlayersList() {
+      const c = document.getElementById('players-container');
+      const players = allUsers.filter(u => u.role === 'Player');
+      c.innerHTML = '';
+      if (players.length === 0) { c.innerHTML = '<p class="text-gray-400 text-xs">No players yet.</p>'; return; }
+      players.forEach(p => {
+        const el = document.createElement('div');
+        el.className = 'pixel-border p-4 rounded-lg text-left';
+        el.innerHTML = `<h4 class="text-white text-xs font-bold mb-1">🗡️ ${p.username}</h4><p class="text-xs text-gray-300">Class: ${p.player_class || '-'} | Lvl: ${p.level || 1} | XP: ${p.xp || 0}</p>`;
+        c.appendChild(el);
+      });
+    }
+    document.getElementById('players-back-btn').addEventListener('click', e => { e.preventDefault(); playButtonClickSound(); showCharacterView(); });
+
+    // Kerja View (Player)
+    function showKerjaView() {
+      showView('kerja-view');
+      loadKerjaQuests();
+    }
+    function loadKerjaQuests() {
+      const c = document.getElementById('kerja-quests');
+      const empty = document.getElementById('kerja-empty');
+      const myQuests = allQuests.filter(q => q.assignedTo === currentUser.username && (q.status === 'assigned' || q.status === 'pending_approval'));
+      c.innerHTML = '';
+      if (myQuests.length === 0) { empty.classList.remove('hidden'); return; }
+      empty.classList.add('hidden');
+      myQuests.forEach(q => {
+        const el = document.createElement('div');
+        el.className = 'pixel-border p-4 rounded-lg text-left';
+        let statusDisplay = '';
+        if (q.status === 'assigned') {
+          statusDisplay = `<span class="text-xs text-blue-400 mt-3 inline-block">[Awaiting Approval...]</span>`;
+        } else {
+          statusDisplay = `<span class="text-xs text-orange-400 mt-3 inline-block">[In Progress...]</span>`;
+        }
+        el.innerHTML = `<h4 class="text-white text-xs font-bold mb-1">📜 ${q.name}</h4><p class="text-xs text-gray-300 mb-1">${q.description}</p><div class="flex justify-between items-center mb-2"><span class="text-xs text-yellow-300">💰 ${q.reward}</span><span class="text-xs text-purple-300">💎 ${q.rewardXp}</span></div><p class="text-xs text-gray-400">From: ${q.createdBy}</p>${statusDisplay}`;
+        c.appendChild(el);
+      });
+    }
+
+    // Raid Dungeon System
+    const RAID_DUNGEONS = [
+      {
+        id: 1,
+        name: "Goblin Catacombs",
+        emoji: "🟢",
+        minLevel: 10,
+        minDefense: 20,
+        minDamage: 30,
+        minMagic: 30,
+        xpReward: 150,
+        rarity: 0.70,
+        dropsByClass: {
+          "Fighter": ["Iron Sword", "Rusty Cleaver", "Heavy Battleaxe", "Leather Helmet", "Leather Chestplate", "Leather Leggings", "Leather Boots"],
+          "Mage": ["Wooden Wand", "Apprentice Staff", "Orb of the Catacombs", "Leather Helmet", "Leather Chestplate", "Leather Leggings", "Leather Boots"],
+          "Rogue": ["Novice Dagger", "Goblin Poison Dagger", "Shadow Blade", "Leather Helmet", "Leather Chestplate", "Leather Leggings", "Leather Boots"]
+        }
+      },
+      {
+        id: 2,
+        name: "Frostbite Caverns",
+        emoji: "❄️",
+        minLevel: 25,
+        minDefense: 60,
+        minDamage: 75,
+        minMagic: 75,
+        xpReward: 350,
+        rarity: 0.60,
+        dropsByClass: {
+          "Fighter": ["Chilled Broadsword", "Frozen Greatsword", "Cryo Warhammer", "Glacial Steel Helmet", "Ice Guard Chestplate", "Frozen Greaves", "Glacial Steel Boots"],
+          "Mage": ["Frost Wand", "Glacial Crystal Staff", "Absolute Zero Scepter", "Glacial Steel Helmet", "Ice Guard Chestplate", "Frozen Greaves", "Glacial Steel Boots"],
+          "Rogue": ["Ice Dagger", "Frostbite Stiletto", "Winter's Bite Bow", "Glacial Steel Helmet", "Ice Guard Chestplate", "Frozen Greaves", "Glacial Steel Boots"]
+        }
+      },
+      {
+        id: 3,
+        name: "Infernal Abyss",
+        emoji: "🔥",
+        minLevel: 40,
+        minDefense: 100,
+        minDamage: 120,
+        minMagic: 120,
+        xpReward: 550,
+        rarity: 0.55,
+        dropsByClass: {
+          "Fighter": ["Hellhound Greatsword", "Ashen Halberd", "Hellfire Spear", "Demon Bone Chestplate", "Flameweaver Robe", "Infernal Helmet", "Infernal Boots"],
+          "Mage": ["Magma Staff", "Infernal Tome", "Phoenix Feather Fan", "Demon Bone Chestplate", "Flameweaver Robe", "Infernal Helmet", "Infernal Boots"],
+          "Rogue": ["Demon Claw Dagger", "Dragon Claws", "Molten Katana", "Demon Bone Chestplate", "Flameweaver Robe", "Infernal Helmet", "Infernal Boots"]
+        }
+      },
+      {
+        id: 4,
+        name: "Void Domain",
+        emoji: "⚫",
+        minLevel: 50,
+        minDefense: 170,
+        minDamage: 170,
+        minMagic: 170,
+        xpReward: 750,
+        rarity: 0.60,
+        dropsByClass: {
+          "Fighter": ["Titan Destroyer Warhammer", "World-Eater Greatsword", "Oblivion Edge", "Voidscale Chestplate", "Sovereign Crown", "Voidscale Leggings", "Sovereign Greaves"],
+          "Mage": ["Nether Staff", "Staff of Infinite Chaos", "Grimoire of Eternal Void", "Voidscale Chestplate", "Sovereign Crown", "Voidscale Leggings", "Sovereign Greaves"],
+          "Rogue": ["Void Dagger", "Shadowreaper Scythe", "Voidstep Twin Blades", "Voidscale Chestplate", "Sovereign Crown", "Voidscale Leggings", "Sovereign Greaves"]
+        }
+      }
+    ];
+
+    let raidCooldownEnd = null; // Timestamp when raid cooldown ends
+
+    function getRaidCooldownTimeRemaining() {
+      if (!raidCooldownEnd) return 0;
+      const now = Date.now();
+      const remaining = raidCooldownEnd - now;
+      return remaining > 0 ? remaining : 0;
+    }
+
+    function setRaidCooldown() {
+      raidCooldownEnd = Date.now() + (60 * 60 * 1000); // 1 hour
+    }
+
+    function startCooldownTimer() {
+      const timerInterval = setInterval(() => {
+        const remaining = getRaidCooldownTimeRemaining();
+        const hours = Math.floor(remaining / (60 * 60 * 1000));
+        const minutes = Math.floor((remaining % (60 * 60 * 1000)) / (60 * 1000));
+        const seconds = Math.floor((remaining % (60 * 1000)) / 1000);
+        const timerEl = document.getElementById('cooldown-timer');
+        if (timerEl) timerEl.textContent = `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        if (remaining <= 0) {
+          clearInterval(timerInterval);
+          raidCooldownEnd = null;
+          loadRaidDungeons();
+        }
+      }, 1000);
+    }
+
+    function loadRaidDungeons() {
+      if (!currentUser) return;
+      const user = allData.find(d => d.username === currentUser.username && d.pin);
+      if (!user) return;
+
+      const cooldownTime = getRaidCooldownTimeRemaining();
+      const cooldownSection = document.getElementById('raid-cooldown-section');
+      const dungeonContainer = document.getElementById('dungeons-container');
+
+      if (cooldownTime > 0) {
+        cooldownSection.classList.remove('hidden');
+        dungeonContainer.innerHTML = '';
+        startCooldownTimer();
+        return;
+      }
+
+      cooldownSection.classList.add('hidden');
+      dungeonContainer.innerHTML = '';
+
+      RAID_DUNGEONS.forEach(dungeon => {
+        const el = document.createElement('div');
+        el.className = 'pixel-border p-6 rounded-lg cursor-pointer transition-all';
+        el.style.background = 'linear-gradient(135deg, #1a1a2a, #0a0a1a)';
+
+        // Check if user meets requirements
+        const meetsLevel = user.level >= dungeon.minLevel;
+        const meetsDefense = (user.defense || 0) >= dungeon.minDefense;
+        const meetsDamage = (user.damage || 0) >= dungeon.minDamage;
+        const meetsMagic = (user.magic_damage || 0) >= dungeon.minMagic;
+        const canRaid = meetsLevel && meetsDefense && meetsDamage && meetsMagic;
+
+        // Calculate dynamic drop rate based on defense/damage/magic
+        let dynamicRarity = dungeon.rarity;
+        if (canRaid) {
+          const userDefense = Math.max(user.defense || 0, dungeon.minDefense);
+          const userDamage = Math.max(user.damage || 0, dungeon.minDamage);
+          const userMagic = Math.max(user.magic_damage || 0, dungeon.minMagic);
+
+          // Defense scaling: 50% excess defense increases drop rate by up to 25%
+          const defenseRatio = (userDefense - dungeon.minDefense) / dungeon.minDefense;
+          const defenseBonus = Math.min(0.25, defenseRatio * 0.5);
+
+          // Damage/Magic scaling: 50% excess damage/magic increases drop rate by up to 25%
+          const damageRatio = (userDamage - dungeon.minDamage) / dungeon.minDamage;
+          const magicRatio = (userMagic - dungeon.minMagic) / dungeon.minMagic;
+          const avgCombatRatio = (Math.max(damageRatio, 0) + Math.max(magicRatio, 0)) / 2;
+          const combatBonus = Math.min(0.25, avgCombatRatio * 0.5);
+
+          dynamicRarity = Math.min(0.95, dungeon.rarity + defenseBonus + combatBonus);
+        }
+
+        const statusColor = canRaid ? '#4ade80' : '#ef4444';
+        const statusText = canRaid ? 'READY' : 'LOCKED';
+
+        // Get drops for player class
+        const drops = dungeon.dropsByClass[user.player_class] || [];
+        const dropsDisplay = drops.slice(0, 5).join(', ');
+
+        el.innerHTML = `
+      <div class="text-4xl mb-3">${dungeon.emoji}</div>
+      <h3 class="text-white text-sm font-bold mb-2">${dungeon.name}</h3>
+      <div class="text-xs text-gray-400 mb-3 space-y-1">
+        <p>📊 Min Level: ${dungeon.minLevel}</p>
+        <p>🛡️ Min Defense: ${dungeon.minDefense}</p>
+        ${dungeon.minDamage > 0 ? `<p>⚔️ Min Damage: ${dungeon.minDamage}</p>` : ''}
+        ${dungeon.minMagic > 0 ? `<p>✨ Min Magic: ${dungeon.minMagic}</p>` : ''}
+      </div>
+      <div class="text-xs mb-3">
+        <p class="text-yellow-300">💎 XP Reward: ${dungeon.xpReward}</p>
+        <p class="text-purple-300">🎁 Drop Rate: ${Math.round(dynamicRarity * 100)}%</p>
+      </div>
+      <div class="text-xs mb-3 p-2 bg-gray-900 rounded border border-gray-700">
+        <p class="text-gray-400 mb-1">🎁 Possible Drops:</p>
+        <p class="text-cyan-300 font-semibold">${dropsDisplay}</p>
+      </div>
+      <p style="color: ${statusColor};" class="text-xs font-bold mb-3">[${statusText}]</p>
+      <button class="raid-btn w-full pixel-btn px-3 py-2 text-xs text-white" data-dungeon="${dungeon.id}" ${!canRaid ? 'disabled' : ''} style="opacity: ${canRaid ? '1' : '0.5'};">RAID</button>
+    `;
+
+        dungeonContainer.appendChild(el);
+      });
+
+      document.querySelectorAll('.raid-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          if (btn.disabled) return;
+          playButtonClickSound();
+
+          const dungeonId = parseInt(btn.dataset.dungeon);
+          const dungeon = RAID_DUNGEONS.find(d => d.id === dungeonId);
+          if (!dungeon) return;
+
+          const user = allData.find(d => d.username === currentUser.username && d.pin);
+          if (!user) return;
+
+          // Check requirements again
+          const meetsLevel = user.level >= dungeon.minLevel;
+          const meetsDefense = (user.defense || 0) >= dungeon.minDefense;
+          const meetsDamage = (user.damage || 0) >= dungeon.minDamage;
+          const meetsMagic = (user.magic_damage || 0) >= dungeon.minMagic;
+
+          if (!meetsLevel || !meetsDefense || !meetsDamage || !meetsMagic) {
+            // Show fail modal
+            const failReqs = document.getElementById('fail-requirements');
+            failReqs.innerHTML = '';
+            if (!meetsLevel) failReqs.innerHTML += `<p>❌ Level: ${user.level}/${dungeon.minLevel}</p>`;
+            if (!meetsDefense) failReqs.innerHTML += `<p>❌ Defense: ${user.defense}/${dungeon.minDefense}</p>`;
+            if (!meetsDamage && dungeon.minDamage > 0) failReqs.innerHTML += `<p>❌ Damage: ${user.damage}/${dungeon.minDamage}</p>`;
+            if (!meetsMagic && dungeon.minMagic > 0) failReqs.innerHTML += `<p>❌ Magic: ${user.magic_damage}/${dungeon.minMagic}</p>`;
+            document.getElementById('raid-fail-modal').classList.remove('hidden');
+            return;
+          }
+
+          // Raid success
+          playSuccessChime();
+          btn.disabled = true;
+
+          // Calculate dynamic drop rate based on player stats
+          const userDefense = Math.max(user.defense || 0, dungeon.minDefense);
+          const userDamage = Math.max(user.damage || 0, dungeon.minDamage);
+          const userMagic = Math.max(user.magic_damage || 0, dungeon.minMagic);
+
+          const defenseRatio = (userDefense - dungeon.minDefense) / dungeon.minDefense;
+          const defenseBonus = Math.min(0.25, defenseRatio * 0.5);
+
+          const damageRatio = (userDamage - dungeon.minDamage) / dungeon.minDamage;
+          const magicRatio = (userMagic - dungeon.minMagic) / dungeon.minMagic;
+          const avgCombatRatio = (Math.max(damageRatio, 0) + Math.max(magicRatio, 0)) / 2;
+          const combatBonus = Math.min(0.25, avgCombatRatio * 0.5);
+
+          const dynamicRarity = Math.min(0.95, dungeon.rarity + defenseBonus + combatBonus);
+
+          // Determine if item drops
+          const drops = dungeon.dropsByClass[user.player_class] || [];
+          const itemDropped = Math.random() < dynamicRarity && drops.length > 0 ? drops[Math.floor(Math.random() * drops.length)] : null;
+
+          // Update user
+          const updated = { ...user, xp: (user.xp || 0) + dungeon.xpReward };
+
+          // Add dropped item to inventory if exists
+          if (itemDropped) {
+            const inventory = parseInventory(user.inventory_armor);
+            if (!inventory.armor.includes(itemDropped)) {
+              inventory.armor.push(itemDropped);
+            }
+            updated.inventory_armor = JSON.stringify(inventory);
+          }
+
+          // Level up check
+          if (updated.xp >= 1000) {
+            updated.level = (updated.level || 1) + 1;
+            updated.xp = updated.xp - 1000;
+            updated.defense = (updated.defense || 5) + 2;
+          }
+
+          const r = await window.dataSdk.update(updated);
+          if (r.isOk) {
+            currentUser = updated;
+
+            // Show result modal
+            const resultTitle = document.getElementById('result-title');
+            const resultOutcome = document.getElementById('result-outcome');
+            const resultXp = document.getElementById('result-xp');
+            const resultItem = document.getElementById('result-item');
+
+            resultTitle.textContent = 'RAID COMPLETE!';
+            resultOutcome.textContent = '🎉';
+            resultXp.textContent = `💎 XP Gained: ${dungeon.xpReward}`;
+
+            if (itemDropped) {
+              resultItem.textContent = `🎁 Item Dropped: ${itemDropped}`;
+              resultItem.classList.remove('hidden');
+            } else {
+              resultItem.classList.add('hidden');
+            }
+
+            document.getElementById('raid-result-modal').classList.remove('hidden');
+
+            // Set cooldown
+            setRaidCooldown();
+          }
+
+          btn.disabled = false;
+        });
+      });
+    }
+
+    // Raid result modal close
+    document.getElementById('result-close-btn').addEventListener('click', () => {
+      document.getElementById('raid-result-modal').classList.add('hidden');
+      loadRaidDungeons();
+    });
+
+    document.getElementById('fail-close-btn').addEventListener('click', () => {
+      document.getElementById('raid-fail-modal').classList.add('hidden');
+    });
+
+    // Carousel
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    function showSlide(i) {
+      playButtonClickSound();
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+      indicators.forEach((ind, j) => { ind.classList.toggle('bg-white', j === i); ind.classList.toggle('bg-gray-500', j !== i); });
+      currentSlide = i;
+    }
+    document.getElementById('next-slide').addEventListener('click', () => showSlide((currentSlide + 1) % slides.length));
+    document.getElementById('prev-slide').addEventListener('click', () => showSlide((currentSlide - 1 + slides.length) % slides.length));
+    indicators.forEach(ind => ind.addEventListener('click', () => showSlide(parseInt(ind.dataset.slide))));
+
+    // Shop inventory with role restrictions
+    const SHOP_INVENTORY = {
+      armor: [
+        // TIER 1 - Fighter
+        { name: 'Iron Cap', defense: 3, cost: 50, tier: 1, roles: ['Fighter'] },
+        { name: 'Novice Leather Chestplate', defense: 6, cost: 100, tier: 1, roles: ['Fighter'] },
+        { name: 'Padded Leather Pants', defense: 4, cost: 75, tier: 1, roles: ['Fighter'] },
+        { name: 'Heavy Leather Boots', defense: 2, cost: 40, tier: 1, roles: ['Fighter'] },
+        // TIER 1 - Mage
+        { name: 'Cloth Hood', defense: 1, cost: 30, tier: 1, roles: ['Mage'] },
+        { name: 'Apprentice Robe Top', defense: 4, cost: 70, tier: 1, roles: ['Mage'] },
+        { name: 'Apprentice Skirt', defense: 2, cost: 50, tier: 1, roles: ['Mage'] },
+        { name: 'Cloth Shoes', defense: 1, cost: 25, tier: 1, roles: ['Mage'] },
+        // TIER 1 - Rogue
+        { name: 'Scout Bandana', defense: 2, cost: 40, tier: 1, roles: ['Rogue'] },
+        { name: 'Scout Tunic', defense: 4, cost: 75, tier: 1, roles: ['Rogue'] },
+        { name: 'Scout Trousers', defense: 3, cost: 60, tier: 1, roles: ['Rogue'] },
+        { name: 'Soft Leather Boots', defense: 1, cost: 30, tier: 1, roles: ['Rogue'] },
+        // TIER 2 - Fighter
+        { name: 'Knight Helm', defense: 10, cost: 250, tier: 2, roles: ['Fighter'] },
+        { name: 'Knight Plate Armor', defense: 22, cost: 450, tier: 2, roles: ['Fighter'] },
+        { name: 'Knight Greaves', defense: 12, cost: 350, tier: 2, roles: ['Fighter'] },
+        { name: 'Steel Boots', defense: 6, cost: 180, tier: 2, roles: ['Fighter'] },
+        // TIER 2 - Mage
+        { name: 'Wizard Hat', defense: 5, cost: 200, tier: 2, roles: ['Mage'] },
+        { name: 'Arcane Robe Top', defense: 12, cost: 300, tier: 2, roles: ['Mage'] },
+        { name: 'Arcane Robe Bottom', defense: 8, cost: 250, tier: 2, roles: ['Mage'] },
+        { name: 'Enchanted Slippers', defense: 5, cost: 180, tier: 2, roles: ['Mage'] },
+        // TIER 2 - Rogue
+        { name: 'Shadow Mask', defense: 6, cost: 200, tier: 2, roles: ['Rogue'] },
+        { name: 'Shadow Leather Vest', defense: 14, cost: 320, tier: 2, roles: ['Rogue'] },
+        { name: 'Shadow Pants', defense: 9, cost: 280, tier: 2, roles: ['Rogue'] },
+        { name: 'Silent Boots', defense: 6, cost: 180, tier: 2, roles: ['Rogue'] },
+        // TIER 3 - Fighter
+        { name: 'Vanguard Helmet', defense: 25, cost: 800, tier: 3, roles: ['Fighter'] },
+        { name: 'Vanguard Cuirass', defense: 55, cost: 1200, tier: 3, roles: ['Fighter'] },
+        { name: 'Vanguard Legguards', defense: 32, cost: 1000, tier: 3, roles: ['Fighter'] },
+        { name: 'Vanguard Sabatons', defense: 18, cost: 600, tier: 3, roles: ['Fighter'] },
+        // TIER 3 - Mage
+        { name: 'Archmage Crown', defense: 12, cost: 700, tier: 3, roles: ['Mage'] },
+        { name: 'Cosmic Star Vestment', defense: 30, cost: 1100, tier: 3, roles: ['Mage'] },
+        { name: 'Cosmic Star Trousers', defense: 18, cost: 900, tier: 3, roles: ['Mage'] },
+        { name: 'Astral Boots', defense: 10, cost: 600, tier: 3, roles: ['Mage'] },
+        // TIER 3 - Rogue
+        { name: 'Nightstalker Hood', defense: 14, cost: 700, tier: 3, roles: ['Rogue'] },
+        { name: 'Nightstalker Chestguard', defense: 36, cost: 1100, tier: 3, roles: ['Rogue'] },
+        { name: 'Nightstalker Chaps', defense: 20, cost: 900, tier: 3, roles: ['Rogue'] },
+        { name: 'Nightstalker Tabi', defense: 10, cost: 600, tier: 3, roles: ['Rogue'] }
+      ],
+      weapons: [
+        // TIER 1 - Fighter
+        { name: 'Training Sword', damage: 10, magic: 0, cost: 80, tier: 1, roles: ['Fighter'] },
+        // TIER 1 - Mage
+        { name: 'Wooden Staff', damage: 0, magic: 12, cost: 100, tier: 1, roles: ['Mage'] },
+        // TIER 1 - Rogue
+        { name: 'Iron Dagger', damage: 8, magic: 0, cost: 70, tier: 1, roles: ['Rogue'] },
+        // TIER 2 - Fighter
+        { name: 'Steel Greatsword', damage: 45, magic: 0, cost: 500, tier: 2, roles: ['Fighter'] },
+        // TIER 2 - Mage
+        { name: 'Crystal Wand', damage: 0, magic: 50, cost: 600, tier: 2, roles: ['Mage'] },
+        // TIER 2 - Rogue
+        { name: 'Dual Daggers', damage: 35, magic: 0, cost: 450, tier: 2, roles: ['Rogue'] },
+        // TIER 3 - Fighter
+        { name: 'Dragon Slayer Blade', damage: 120, magic: 0, cost: 1500, tier: 3, roles: ['Fighter'] },
+        // TIER 3 - Mage
+        { name: 'Staff of the Archmage', damage: 0, magic: 135, cost: 1800, tier: 3, roles: ['Mage'] },
+        // TIER 3 - Rogue
+        { name: 'Phantom Daggers', damage: 95, magic: 0, cost: 1400, tier: 3, roles: ['Rogue'] }
+      ]
+    };
+
+    // Get tier display and color for weapons/armor
+    function getTierInfo(tier) {
+      const tierMap = {
+        1: { label: 'TIER 1 - Early Game', color: '#22c55e', bgColor: '#0a2a0a' }, // Green
+        2: { label: 'TIER 2 - Mid Game', color: '#0ea5e9', bgColor: '#0a1a2a' },   // Blue
+        3: { label: 'TIER 3 - Late Game', color: '#f59e0b', bgColor: '#2a1a0a' }   // Gold/Orange
+      };
+      return tierMap[tier] || { label: 'UNKNOWN', color: '#ffffff', bgColor: '#111111' };
+    }
+
+    // Parse inventory JSON from player data
+    function parseInventory(inventoryStr) {
+      if (!inventoryStr) return { armor: [], weapons: [] };
+      try {
+        return JSON.parse(inventoryStr);
+      } catch {
+        return { armor: [], weapons: [] };
+      }
+    }
+
+    // Serialize inventory to JSON string
+    function serializeInventory(inv) {
+      return JSON.stringify(inv);
+    }
+
+    // Global helper functions - moved out of populateEquipmentDropdowns for use in event handlers
+    function getArmorDefense(name) {
+      const item = SHOP_INVENTORY.armor.find(a => a.name === name);
+      return item ? item.defense : 0;
+    }
+
+    function getWeaponStats(name) {
+      const item = SHOP_INVENTORY.weapons.find(w => w.name === name);
+      return item ? { damage: item.damage, magic: item.magic } : { damage: 0, magic: 0 };
+    }
+
+    function populateEquipmentDropdowns(user) {
+      const armorHelmet = user.armor_helmet || '';
+      const armorChest = user.armor_chest || '';
+      const armorPants = user.armor_pants || '';
+      const armorBoots = user.armor_boots || '';
+      const weaponEquipped = user.weapon_equipped || '';
+
+      // Parse owned items from player data
+      const inventory = parseInventory(user.inventory_armor);
+      const weapons = parseInventory(user.inventory_weapons);
+
+      // Update helmet display
+      const helmetNameEl = document.getElementById('helmet-name');
+      const helmetStatEl = document.getElementById('helmet-stat');
+      if (helmetNameEl) helmetNameEl.textContent = armorHelmet || '-';
+      if (helmetStatEl) helmetStatEl.textContent = armorHelmet ? `DEF +${getArmorDefense(armorHelmet)}` : 'DEF +0';
+
+      // Update chest display
+      const chestNameEl = document.getElementById('chest-name');
+      const chestStatEl = document.getElementById('chest-stat');
+      if (chestNameEl) chestNameEl.textContent = armorChest || '-';
+      if (chestStatEl) chestStatEl.textContent = armorChest ? `DEF +${getArmorDefense(armorChest)}` : 'DEF +0';
+
+      // Update pants display
+      const pantsNameEl = document.getElementById('pants-name');
+      const pantsStatEl = document.getElementById('pants-stat');
+      if (pantsNameEl) pantsNameEl.textContent = armorPants || '-';
+      if (pantsStatEl) pantsStatEl.textContent = armorPants ? `DEF +${getArmorDefense(armorPants)}` : 'DEF +0';
+
+      // Update boots display
+      const bootsNameEl = document.getElementById('boots-name');
+      const bootsStatEl = document.getElementById('boots-stat');
+      if (bootsNameEl) bootsNameEl.textContent = armorBoots || '-';
+      if (bootsStatEl) bootsStatEl.textContent = armorBoots ? `DEF +${getArmorDefense(armorBoots)}` : 'DEF +0';
+
+      // Update weapon display
+      const weaponNameEl = document.getElementById('weapon-name');
+      const weaponStatEl = document.getElementById('weapon-stat');
+      if (weaponNameEl) weaponNameEl.textContent = weaponEquipped || '-';
+      if (weaponStatEl) {
+        if (weaponEquipped) {
+          const weaponData = getWeaponStats(weaponEquipped);
+          if (weaponData && weaponData.magic > 0) {
+            weaponStatEl.textContent = `MAGIC +${weaponData.magic}`;
+          } else if (weaponData) {
+            weaponStatEl.textContent = `DMG +${weaponData.damage}`;
+          } else {
+            weaponStatEl.textContent = 'DMG +0';
+          }
+        } else {
+          weaponStatEl.textContent = 'DMG +0';
+        }
+      }
+
+      // Populate helmet dropdown from inventory_armor
+      const helmetSelect = document.getElementById('helmet-select');
+      if (helmetSelect) {
+        helmetSelect.innerHTML = '<option value="">-- Unequip --</option>';
+        inventory.armor.forEach(item => {
+          if (item.includes('Helmet') || item.includes('helmet') || item.includes('Hood') || item.includes('hood') || item.includes('Bandana') || item.includes('bandana') || item.includes('Hat') || item.includes('hat') || item.includes('Cap') || item.includes('cap') || item.includes('Crown') || item.includes('crown') || item.includes('Mask') || item.includes('mask')) {
+            const opt = document.createElement('option');
+            opt.value = item;
+            opt.textContent = item;
+            helmetSelect.appendChild(opt);
+          }
+        });
+        helmetSelect.value = armorHelmet;
+      }
+
+      // Populate chest dropdown from inventory_armor
+      const chestSelect = document.getElementById('chest-select');
+      if (chestSelect) {
+        chestSelect.innerHTML = '<option value="">-- Unequip --</option>';
+        inventory.armor.forEach(item => {
+          if (item.includes('Chest') || item.includes('chest') || item.includes('Plate') || item.includes('plate') || item.includes('Robe') || item.includes('robe') || item.includes('Tunic') || item.includes('tunic') || item.includes('Vest') || item.includes('vest') || item.includes('Chestplate') || item.includes('chestplate') || item.includes('Chestguard') || item.includes('chestguard') || item.includes('Cuirass') || item.includes('cuirass')) {
+            const opt = document.createElement('option');
+            opt.value = item;
+            opt.textContent = item;
+            chestSelect.appendChild(opt);
+          }
+        });
+        chestSelect.value = armorChest;
+      }
+
+      // Populate pants dropdown from inventory_armor
+      const pantsSelect = document.getElementById('pants-select');
+      if (pantsSelect) {
+        pantsSelect.innerHTML = '<option value="">-- Unequip --</option>';
+        inventory.armor.forEach(item => {
+          if (item.includes('Pants') || item.includes('pants') || item.includes('Trousers') || item.includes('trousers') || item.includes('Greaves') || item.includes('greaves') || item.includes('Skirt') || item.includes('skirt') || item.includes('Chaps') || item.includes('chaps') || item.includes('Legguards') || item.includes('legguards')) {
+            const opt = document.createElement('option');
+            opt.value = item;
+            opt.textContent = item;
+            pantsSelect.appendChild(opt);
+          }
+        });
+        pantsSelect.value = armorPants;
+      }
+
+      // Populate boots dropdown from inventory_armor
+      const bootsSelect = document.getElementById('boots-select');
+      if (bootsSelect) {
+        bootsSelect.innerHTML = '<option value="">-- Unequip --</option>';
+        inventory.armor.forEach(item => {
+          if (item.includes('Boots') || item.includes('boots') || item.includes('Shoes') || item.includes('shoes') || item.includes('Slippers') || item.includes('slippers') || item.includes('Sabatons') || item.includes('sabatons') || item.includes('Tabi') || item.includes('tabi')) {
+            const opt = document.createElement('option');
+            opt.value = item;
+            opt.textContent = item;
+            bootsSelect.appendChild(opt);
+          }
+        });
+        bootsSelect.value = armorBoots;
+      }
+
+      // Populate weapon dropdown from inventory_weapons
+      const weaponSelect = document.getElementById('weapon-select');
+      if (weaponSelect) {
+        weaponSelect.innerHTML = '<option value="">-- Unequip --</option>';
+        weapons.weapons.forEach(item => {
+          const opt = document.createElement('option');
+          opt.value = item;
+          opt.textContent = item;
+          weaponSelect.appendChild(opt);
+        });
+        weaponSelect.value = weaponEquipped;
+      }
+    }
+
+    // Equipment selection change handlers - attach dynamically after dropdowns are created
+    function attachEquipmentHandlers() {
+      ['helmet', 'chest', 'pants', 'boots'].forEach(armorType => {
+        const selectEl = document.getElementById(armorType + '-select');
+        if (selectEl) {
+          // Remove old listeners by cloning and replacing
+          const newSelect = selectEl.cloneNode(true);
+          selectEl.parentNode.replaceChild(newSelect, selectEl);
+
+          newSelect.addEventListener('change', async (e) => {
+            e.preventDefault();
+            if (!currentUser) return;
+            const user = allData.find(d => d.username === currentUser.username && d.pin);
+            if (!user) return;
+            const updated = { ...user };
+            const fieldName = 'armor_' + armorType;
+
+            // Get old armor defense value
+            const oldArmorName = user[fieldName];
+            const oldDefense = getArmorDefense(oldArmorName);
+
+            // Get new armor defense value
+            const newArmorName = newSelect.value;
+            const newDefense = getArmorDefense(newArmorName);
+
+            // Calculate net defense change
+            const defenseChange = newDefense - oldDefense;
+            updated[fieldName] = newArmorName || '';
+            updated.defense = Math.max(0, (user.defense || 5) + defenseChange);
+
+            const r = await window.dataSdk.update(updated);
+            if (r.isOk) {
+              currentUser = updated; // Update local user
+              playSuccessChime();
+              const changeMsg = newArmorName ? `Armor equipped! DEF ${defenseChange >= 0 ? '+' : ''}${defenseChange}` : 'Armor unequipped!';
+              showToast(changeMsg);
+              updatePlayerStats();
+            }
+          });
+        }
+      });
+
+      const weaponSelect = document.getElementById('weapon-select');
+      if (weaponSelect) {
+        const newWeaponSelect = weaponSelect.cloneNode(true);
+        weaponSelect.parentNode.replaceChild(newWeaponSelect, weaponSelect);
+
+        newWeaponSelect.addEventListener('change', async (e) => {
+          e.preventDefault();
+          if (!currentUser) return;
+          const user = allData.find(d => d.username === currentUser.username && d.pin);
+          if (!user) return;
+          const updated = { ...user };
+
+          // Get old weapon stats
+          const oldWeaponName = user.weapon_equipped;
+          const oldWeaponStats = getWeaponStats(oldWeaponName);
+
+          // Get new weapon stats
+          const newWeaponName = newWeaponSelect.value;
+          const newWeaponStats = getWeaponStats(newWeaponName);
+
+          // Calculate net damage/magic change
+          const damageChange = newWeaponStats.damage - oldWeaponStats.damage;
+          const magicChange = newWeaponStats.magic - oldWeaponStats.magic;
+
+          updated.weapon_equipped = newWeaponName || '';
+          updated.damage = Math.max(0, (user.damage || 0) + damageChange);
+          updated.magic_damage = Math.max(0, (user.magic_damage || 0) + magicChange);
+
+          const r = await window.dataSdk.update(updated);
+          if (r.isOk) {
+            currentUser = updated; // Update local user
+            playSuccessChime();
+            let changeMsg = '';
+            if (newWeaponName) {
+              if (newWeaponStats.magic > 0) {
+                changeMsg = `Weapon equipped! MAGIC ${magicChange >= 0 ? '+' : ''}${magicChange}`;
+              } else {
+                changeMsg = `Weapon equipped! DMG ${damageChange >= 0 ? '+' : ''}${damageChange}`;
+              }
+            } else {
+              changeMsg = 'Weapon unequipped!';
+            }
+            showToast(changeMsg);
+            updatePlayerStats();
+          }
+        });
+      }
+    }
+
+    // Kedai Shop Tabs
+    const kedaiTabBtns = document.querySelectorAll('.kedai-tab-btn');
+    kedaiTabBtns.forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        playButtonClickSound();
+        const tabId = btn.id.replace('kedai-tab-', '');
+        kedaiTabBtns.forEach(b => { b.classList.remove('bg-white', 'text-black'); b.classList.add('bg-gray-700', 'text-white'); });
+        btn.classList.add('bg-white', 'text-black');
+        btn.classList.remove('bg-gray-700', 'text-white');
+        document.getElementById('kedai-armor-section').classList.add('hidden');
+        document.getElementById('kedai-weapon-section').classList.add('hidden');
+        document.getElementById('kedai-' + tabId + '-section').classList.remove('hidden');
+        if (tabId === 'armor') loadArmorShop();
+        if (tabId === 'weapon') loadWeaponShop();
+      });
+    });
+
+    // Load Armor Shop
+    function loadArmorShop() {
+      if (!currentUser) return;
+      const container = document.getElementById('armor-shop-items');
+      const empty = document.getElementById('armor-shop-empty');
+      const availableArmor = SHOP_INVENTORY.armor.filter(a => a.roles.includes(currentUser.player_class));
+      container.innerHTML = '';
+      if (availableArmor.length === 0) { empty.classList.remove('hidden'); return; }
+      empty.classList.add('hidden');
+      availableArmor.forEach(item => {
+        const el = document.createElement('div');
+        const tierInfo = getTierInfo(item.tier);
+        el.className = 'pixel-border p-4 rounded-lg text-left';
+        el.style.background = tierInfo.bgColor;
+        el.style.borderColor = tierInfo.color;
+        el.style.boxShadow = `0 0 10px ${tierInfo.color}80`;
+        el.innerHTML = `<p class="text-2xs mb-2" style="font-size:8px;color:${tierInfo.color};font-weight:bold;">${tierInfo.label}</p><h4 class="text-white text-xs font-bold mb-2">${item.name}</h4><div class="flex justify-between items-center mb-3"><span class="text-xs font-bold" style="color:${tierInfo.color};">🛡️ DEF +${item.defense}</span><span class="text-xs text-yellow-300 font-bold">💰 ${item.cost}</span></div><button class="buy-armor-btn w-full pixel-btn px-2 py-1 text-xs text-white border-white" data-armor="${item.name}" data-cost="${item.cost}" data-defense="${item.defense}">BUY</button>`;
+        container.appendChild(el);
+      });
+      document.querySelectorAll('.buy-armor-btn').forEach(btn => {
+        btn.addEventListener('click', async e => {
+          e.preventDefault();
+          playCoinSound();
+          if (!currentUser) { showToast('Please login first'); return; }
+          const cost = parseInt(btn.dataset.cost);
+          const armorName = btn.dataset.armor;
+          const user = allData.find(d => d.username === currentUser.username && d.pin);
+          if (!user) return;
+          if ((user.coins || 0) < cost) { showToast('Not enough coins!'); return; }
+          btn.disabled = true;
+          const updated = { ...user, coins: (user.coins || 0) - cost };
+          const inventory = parseInventory(user.inventory_armor);
+          if (!inventory.armor.includes(armorName)) {
+            inventory.armor.push(armorName);
+          }
+          updated.inventory_armor = JSON.stringify(inventory);
+          const r = await window.dataSdk.update(updated);
+          if (r.isOk) { showToast(`${armorName} purchased!`); loadArmorShop(); }
+          else showToast('Failed to purchase');
+          btn.disabled = false;
+        });
+      });
+    }
+
+    // Load Weapon Shop
+    function loadWeaponShop() {
+      if (!currentUser) return;
+      const container = document.getElementById('weapon-shop-items');
+      const empty = document.getElementById('weapon-shop-empty');
+      const availableWeapons = SHOP_INVENTORY.weapons.filter(w => w.roles.includes(currentUser.player_class));
+      container.innerHTML = '';
+      if (availableWeapons.length === 0) { empty.classList.remove('hidden'); return; }
+      empty.classList.add('hidden');
+      availableWeapons.forEach(item => {
+        const el = document.createElement('div');
+        const tierInfo = getTierInfo(item.tier);
+        el.className = 'pixel-border p-4 rounded-lg text-left';
+        el.style.background = tierInfo.bgColor;
+        el.style.borderColor = tierInfo.color;
+        el.style.boxShadow = `0 0 10px ${tierInfo.color}80`;
+        const statText = item.magic > 0 ? `✨ MAGIC +${item.magic}` : `⚔️ DMG +${item.damage}`;
+        el.innerHTML = `<p class="text-2xs mb-2" style="font-size:8px;color:${tierInfo.color};font-weight:bold;">${tierInfo.label}</p><h4 class="text-white text-xs font-bold mb-2">${item.name}</h4><div class="flex justify-between items-center mb-3"><span class="text-xs font-bold" style="color:${tierInfo.color};">${statText}</span><span class="text-xs text-yellow-300 font-bold">💰 ${item.cost}</span></div><button class="buy-weapon-btn w-full pixel-btn px-2 py-1 text-xs text-white border-white" data-weapon="${item.name}" data-cost="${item.cost}" data-damage="${item.damage}" data-magic="${item.magic}">BUY</button>`;
+        container.appendChild(el);
+      });
+      document.querySelectorAll('.buy-weapon-btn').forEach(btn => {
+        btn.addEventListener('click', async e => {
+          e.preventDefault();
+          playCoinSound();
+          if (!currentUser) { showToast('Please login first'); return; }
+          const cost = parseInt(btn.dataset.cost);
+          const weaponName = btn.dataset.weapon;
+          const user = allData.find(d => d.username === currentUser.username && d.pin);
+          if (!user) return;
+          if ((user.coins || 0) < cost) { showToast('Not enough coins!'); return; }
+          btn.disabled = true;
+          const updated = { ...user, coins: (user.coins || 0) - cost };
+          const weapons = parseInventory(user.inventory_weapons);
+          if (!weapons.weapons.includes(weaponName)) {
+            weapons.weapons.push(weaponName);
+          }
+          updated.inventory_weapons = JSON.stringify(weapons);
+          updated.weapon_equipped = '';
+          const r = await window.dataSdk.update(updated);
+          if (r.isOk) { showToast(`${weaponName} purchased!`); loadWeaponShop(); }
+          else showToast('Failed to purchase');
+          btn.disabled = false;
+        });
+      });
+    }
+
+    // Navbar show/hide
+    const navbar = document.querySelector('nav');
+    let hideTimeout;
+    function showNavbar() { navbar.classList.add('visible'); clearTimeout(hideTimeout); hideTimeout = setTimeout(() => navbar.classList.remove('visible'), 3000); }
+    document.addEventListener('mousemove', e => { if (e.clientY < 100) showNavbar(); });
+
+    initDataSdk();
+    lucide.createIcons();
+  </script>
+
+  <canva-element-overlay style="position: fixed; z-index: 2147483647; pointer-events: none;"><template
+      shadowrootmode="open">
+      <div style="position: fixed; pointer-events: none; inset: 0px;"></div>
+    </template></canva-element-overlay>
+</body>
+
+</html>
